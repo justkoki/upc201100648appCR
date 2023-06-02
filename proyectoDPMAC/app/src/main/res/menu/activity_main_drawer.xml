@@ -16,5 +16,21 @@
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_slideshow" />
+        <item
+            android:id="@+id/nav_solicitud_registrar"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/menu_solicitud_registrar" />
+        <item
+            android:id="@+id/nav_solicitudes_pendientes"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_solicitudes_pendientes" />
+        <item
+            android:id="@+id/nav_solicitudes_en_revision"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_solicitudes_en_revision" />
+        <item
+            android:id="@+id/nav_solicitudes_aprobadas"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_solicitudes_aprobadas" />
     </group>
 </menu>

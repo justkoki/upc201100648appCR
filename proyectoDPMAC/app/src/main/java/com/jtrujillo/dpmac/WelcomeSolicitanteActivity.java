@@ -18,7 +18,12 @@ public class WelcomeSolicitanteActivity extends AppCompatActivity {
         oHandler.postDelayed(new Runnable() {
             @Override
             public void run() {
+                Bundle bndDatos = new Bundle();
+                bndDatos.putInt("idUsuarioTipo", 2);
+
                 Intent i = new Intent(WelcomeSolicitanteActivity.this, MenuSolicitanteActivity.class);
+                //Intent i = new Intent(WelcomeSolicitanteActivity.this, MainActivity.class);
+                i.putExtras(bndDatos);
                 startActivity(i);
                 finish();
             }

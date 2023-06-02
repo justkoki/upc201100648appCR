@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.widget.TextView;
 
 public class WelcomeInversionistaActivity extends AppCompatActivity {
     Handler oHandler;
@@ -18,7 +19,12 @@ public class WelcomeInversionistaActivity extends AppCompatActivity {
         oHandler.postDelayed(new Runnable() {
             @Override
             public void run() {
+                Bundle bndDatos = new Bundle();
+                bndDatos.putInt("idUsuarioTipo", 3);
+
                 Intent i = new Intent(WelcomeInversionistaActivity.this, MenuInversionistaActivity.class);
+                //Intent i = new Intent(WelcomeInversionistaActivity.this, MainActivity.class);
+                i.putExtras(bndDatos);
                 startActivity(i);
                 finish();
             }

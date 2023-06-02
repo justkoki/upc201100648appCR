@@ -3,35 +3,35 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation_inversionista"
-    app:startDestination="@+id/nav_home">
-
+    app:startDestination="@+id/nav_oportunidades">
+<!--
     <fragment
         android:id="@+id/nav_dashboard"
         android:name="com.jtrujillo.dpmac.ui.home.HomeFragment"
         android:label="@string/menu_dashboard"
         tools:layout="@layout/fragment_dashboard" />
-
+-->
     <fragment
         android:id="@+id/nav_oportunidades"
-        android:name="com.jtrujillo.dpmac.ui.gallery.GalleryFragment"
+        android:name="com.jtrujillo.dpmac.ui.oportunidades.OportunidadesFragment"
         android:label="@string/menu_oportunidades"
         tools:layout="@layout/fragment_oportunidades" />
 
     <fragment
         android:id="@+id/nav_mis_inversiones"
-        android:name="com.jtrujillo.dpmac.ui.slideshow.SlideshowFragment"
+        android:name="com.jtrujillo.dpmac.ui.oportunidades.OportunidadesFragment"
         android:label="@string/menu_mis_inversiones"
         tools:layout="@layout/fragment_oportunidades" />
 
     <fragment
         android:id="@+id/nav_mis_inversiones_en_cobranza"
-        android:name="com.jtrujillo.dpmac.ui.slideshow.SlideshowFragment"
+        android:name="com.jtrujillo.dpmac.ui.oportunidades.OportunidadesFragment"
         android:label="@string/menu_mis_inversiones_en_cobranza"
         tools:layout="@layout/fragment_oportunidades" />
 
     <fragment
         android:id="@+id/nav_mis_inversiones_terminadas"
-        android:name="com.jtrujillo.dpmac.ui.slideshow.SlideshowFragment"
+        android:name="com.jtrujillo.dpmac.ui.oportunidades.OportunidadesFragment"
         android:label="@string/menu_mis_inversiones_terminadas"
         tools:layout="@layout/fragment_oportunidades" />
 </navigation>

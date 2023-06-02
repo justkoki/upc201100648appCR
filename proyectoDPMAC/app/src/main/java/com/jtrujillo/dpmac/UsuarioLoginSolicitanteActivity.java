@@ -19,7 +19,11 @@ public class UsuarioLoginSolicitanteActivity extends AppCompatActivity {
 
         btnLogin = (Button)findViewById(R.id.btnLogin);
         btnLogin.setOnClickListener(v -> {
+            //Bundle bndDatos = new Bundle();
+            //bndDatos.putInt("idUsuarioTipo", 2);
+
             Intent i = new Intent(this, WelcomeSolicitanteActivity.class);
+            //i.putExtras(bndDatos);
             startActivity(i);
         });
 
