@@ -10,6 +10,16 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_solicitud_registrar">Registrar Solicitud</string>
+    <string name="menu_solicitudes_pendientes">Sol. Pendientes</string>
+    <string name="menu_solicitudes_en_revision">Sol. En Revisión</string>
+    <string name="menu_solicitudes_aprobadas">Sol. Aprobadas</string>
+    <string name="menu_dashboard">Dashboard</string>
+    <string name="menu_oportunidades">Oportunidades de Inversión</string>
+    <string name="menu_mis_inversiones">Mis Inversiones</string>
+    <string name="menu_mis_inversiones_en_cobranza">Mis Inv. en Cobranza</string>
+    <string name="menu_mis_inversiones_terminadas">Mis Inv. en Terminadas</string>
+
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
@@ -23,4 +33,8 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="title_activity_menu_solicitante">MenuSolicitanteActivity</string>
+    <string name="title_activity_menu_inversionista">MenuInversionistaActivity</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

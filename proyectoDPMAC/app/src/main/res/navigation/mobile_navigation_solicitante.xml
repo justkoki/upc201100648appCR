@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation_solicitante"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_solicitud_registrar"
+        android:name="com.jtrujillo.dpmac.ui.home.HomeFragment"
+        android:label="@string/menu_solicitud_registrar"
+        tools:layout="@layout/fragment_solicitud_registrar" />
+
+    <fragment
+        android:id="@+id/nav_solicitudes_pendientes"
+        android:name="com.jtrujillo.dpmac.ui.gallery.GalleryFragment"
+        android:label="@string/menu_solicitudes_pendientes"
+        tools:layout="@layout/fragment_solicitudes_pendientes" />
+
+    <fragment
+        android:id="@+id/nav_solicitudes_en_revision"
+        android:name="com.jtrujillo.dpmac.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_solicitudes_en_revision"
+        tools:layout="@layout/fragment_solicitudes_pendientes" />
+
+    <fragment
+        android:id="@+id/nav_solicitudes_aprobadas"
+        android:name="com.jtrujillo.dpmac.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_solicitudes_aprobadas"
+        tools:layout="@layout/fragment_solicitudes_pendientes" />
+</navigation>
