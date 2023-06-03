@@ -616,4 +616,17 @@
 
     </ScrollView>
 
+    <Button
+        android:id="@+id/btnSolicitudRegistrar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="5dp"
+        android:background="@color/cr_azul_oscuro"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:text="Registrar Solicitud"/>
+
 </FrameLayout>

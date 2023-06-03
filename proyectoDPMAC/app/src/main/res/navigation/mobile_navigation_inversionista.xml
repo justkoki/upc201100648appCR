@@ -18,6 +18,12 @@
         tools:layout="@layout/fragment_oportunidades" />
 
     <fragment
+        android:id="@+id/nav_oportunidadesmapa"
+        android:name="com.jtrujillo.dpmac.ui.oportunidadesmapa.OportunidadesmapaFragment"
+        android:label="@string/menu_oportunidades"
+        tools:layout="@layout/fragment_oportunidadesmapa" />
+
+    <fragment
         android:id="@+id/nav_misinversiones"
         android:name="com.jtrujillo.dpmac.ui.misinversiones.MisinversionesFragment"
         android:label="@string/menu_mis_inversiones"
