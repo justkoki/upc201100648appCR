@@ -33,6 +33,7 @@ public class MenuSolicitanteActivity extends AppCompatActivity /*implements Navi
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.appBarMenuSolicitante.toolbar);
+        /*
         binding.appBarMenuSolicitante.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -40,12 +41,13 @@ public class MenuSolicitanteActivity extends AppCompatActivity /*implements Navi
                         .setAction("Action", null).show();
             }
         });
+        */
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_solicitud_registrar, R.id.nav_solicitudes_pendientes, R.id.nav_solicitudes_en_revision, R.id.nav_solicitudes_aprobadas)
+                R.id.nav_solicitud_registrar, R.id.nav_solicitudes_pendientes, R.id.nav_solicitudes_enrevision, R.id.nav_solicitudes_aprobadas)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_menu_solicitante);

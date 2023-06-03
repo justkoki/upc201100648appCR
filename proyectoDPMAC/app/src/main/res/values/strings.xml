@@ -25,9 +25,13 @@
     <string name="card_titulo_riesgo">Riesgo:</string>
     <string name="card_titulo_fecvigenciafin">Fecha de cierre:</string>
     <string name="card_titulo_tasacion">Valorización:</string>
-    <string name="card_titulo_ratio">Ratio:</string>
+    <string name="card_titulo_ratio">Ratio: </string>
     <string name="card_titulo_disponible">Disponible:</string>
     <string name="card_titulo_rendimiento">Rendimiento / TIR:</string>
+    <string name="card_titulo_plazo">Plazo (meses): </string>
+    <string name="card_titulo_impganancia">Ganancia Estimada</string>
+
+    <string name="cr_general_pordefinir">Por definir</string>
 
     <string name="cr_oportunidadtipo_casa">Casa</string>
     <string name="cr_oportunidadtipo_departamento">Departamento</string>

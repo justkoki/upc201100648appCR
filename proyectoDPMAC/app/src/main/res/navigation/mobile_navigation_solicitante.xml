@@ -18,16 +18,16 @@
         tools:layout="@layout/fragment_solicitudes_pendientes" />
 
     <fragment
-        android:id="@+id/nav_solicitudes_en_revision"
-        android:name="com.jtrujillo.dpmac.ui.solicitudespendientes.SolicitudesPendientesFragment"
+        android:id="@+id/nav_solicitudes_enrevision"
+        android:name="com.jtrujillo.dpmac.ui.solicitudesenrevision.SolicitudesEnrevisionFragment"
         android:label="@string/menu_solicitudes_en_revision"
-        tools:layout="@layout/fragment_solicitudes_pendientes" />
+        tools:layout="@layout/fragment_solicitudes_enrevision" />
 
     <fragment
         android:id="@+id/nav_solicitudes_aprobadas"
-        android:name="com.jtrujillo.dpmac.ui.solicitudespendientes.SolicitudesPendientesFragment"
+        android:name="com.jtrujillo.dpmac.ui.solicitudesaprobadas.SolicitudesAprobadasFragment"
         android:label="@string/menu_solicitudes_aprobadas"
-        tools:layout="@layout/fragment_solicitudes_pendientes" />
+        tools:layout="@layout/fragment_solicitudes_aprobadas" />
 
     <fragment
         android:id="@+id/nav_usuario_actualizar"

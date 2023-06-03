@@ -13,15 +13,15 @@
             android:icon="@drawable/ic_menu_gallery"
             android:title="@string/menu_oportunidades" />
         <item
-            android:id="@+id/nav_mis_inversiones"
+            android:id="@+id/nav_misinversiones"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_mis_inversiones" />
         <item
-            android:id="@+id/nav_mis_inversiones_en_cobranza"
+            android:id="@+id/nav_misinversiones_encobranza"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_mis_inversiones_en_cobranza" />
         <item
-            android:id="@+id/nav_mis_inversiones_terminadas"
+            android:id="@+id/nav_misinversiones_terminadas"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_mis_inversiones_terminadas" />
     </group>

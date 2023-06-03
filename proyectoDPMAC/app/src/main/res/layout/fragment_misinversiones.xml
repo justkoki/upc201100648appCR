@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.solicitudespendientes.SolicitudesPendientesFragment">
+    tools:context=".ui.misinversiones.MisinversionesFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -17,7 +17,7 @@
             android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/scvSolicitud"
+                android:id="@+id/scvOportunidad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="10dp"
@@ -74,12 +74,12 @@
                                     android:layout_width="120dp"
                                     android:layout_height="25dp"
                                     android:layout_marginLeft="10dp"
-                                    android:background="@color/cr_perfilriesgo_pordefinir"
+                                    android:background="@color/cr_perfilriesgo_moderado"
                                     android:gravity="center"
                                     android:paddingHorizontal="20dp"
                                     android:shadowRadius="50"
-                                    android:text="@string/cr_perfilriesgo_pendiente"
-                                    android:textColor="@color/white"
+                                    android:text="@string/cr_perfilriesgo_moderado"
+                                    android:textColor="@color/cr_azul_oscuro2"
                                     android:textSize="12sp"
                                     android:textStyle="bold" />
 
@@ -88,7 +88,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/card_titulo_fecvigenciafin"
+                                android:text="@string/card_titulo_impganancia"
                                 android:textColor="@color/cr_gris_claro"
                                 android:textSize="15sp" />
 
@@ -96,7 +96,7 @@
                                 android:id="@+id/txtFecVigenciaFin"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="25/08/2023"
+                                android:text="S/. 2,000.00"
                                 android:textColor="@color/cr_azul_oscuro"
                                 android:textSize="15sp"
                                 android:textStyle="bold" />
@@ -114,7 +114,7 @@
                                 android:id="@+id/txtImpPrestamo"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="S/. 50,000.00"
+                                android:text="S/. 10,000.00"
                                 android:textColor="@color/cr_azul_oscuro"
                                 android:textSize="18sp"
                                 android:textStyle="bold" />
@@ -127,7 +127,7 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/card_titulo_ratio"
+                                    android:text="@string/card_titulo_plazo"
                                     android:textColor="@color/cr_gris_claro"
                                     android:textSize="15sp" />
 
@@ -135,7 +135,7 @@
                                     android:id="@+id/txtPctRatio"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="0.00%"
+                                    android:text="12"
                                     android:textColor="@color/cr_azul_oscuro"
                                     android:textSize="15sp"
                                     android:textStyle="bold" />
@@ -145,7 +145,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/card_titulo_tasacion"
+                                android:text="@string/card_titulo_rendimiento"
                                 android:textColor="@color/cr_gris_claro"
                                 android:textSize="15sp" />
 
@@ -153,7 +153,7 @@
                                 android:id="@+id/txtImpTasacion"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/cr_general_pordefinir"
+                                android:text="1.67% / 20.00%"
                                 android:textColor="@color/cr_azul_oscuro"
                                 android:textSize="15sp"
                                 android:textStyle="bold" />
@@ -162,11 +162,20 @@
 
                     </LinearLayout>
 
+                    <ProgressBar
+                        android:id="@+id/pgbPctInvertido"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:progress="30"
+                        android:max="100"
+                        android:progressDrawable="@drawable/custom_progressbar"/>
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/scvSolicitud2"
+                android:id="@+id/scvOportunidad2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="10dp"
@@ -223,11 +232,11 @@
                                     android:layout_width="120dp"
                                     android:layout_height="25dp"
                                     android:layout_marginLeft="10dp"
-                                    android:background="@color/cr_perfilriesgo_pordefinir"
+                                    android:background="@color/cr_perfilriesgo_bajo"
                                     android:gravity="center"
                                     android:paddingHorizontal="20dp"
                                     android:shadowRadius="50"
-                                    android:text="@string/cr_perfilriesgo_pendiente"
+                                    android:text="@string/cr_perfilriesgo_bajo"
                                     android:textColor="@color/white"
                                     android:textSize="12sp"
                                     android:textStyle="bold" />
@@ -237,7 +246,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/card_titulo_fecvigenciafin"
+                                android:text="@string/card_titulo_impganancia"
                                 android:textColor="@color/cr_gris_claro"
                                 android:textSize="15sp" />
 
@@ -245,7 +254,7 @@
                                 android:id="@+id/txtFecVigenciaFin2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="25/08/2023"
+                                android:text="S/. 4,000.00"
                                 android:textColor="@color/cr_azul_oscuro"
                                 android:textSize="15sp"
                                 android:textStyle="bold" />
@@ -263,7 +272,7 @@
                                 android:id="@+id/txtImpPrestamo2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="S/. 50,000.00"
+                                android:text="S/. 10,000.00"
                                 android:textColor="@color/cr_azul_oscuro"
                                 android:textSize="18sp"
                                 android:textStyle="bold" />
@@ -276,7 +285,7 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/card_titulo_ratio"
+                                    android:text="@string/card_titulo_plazo"
                                     android:textColor="@color/cr_gris_claro"
                                     android:textSize="15sp" />
 
@@ -284,7 +293,7 @@
                                     android:id="@+id/txtPctRatio2"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="0.00%"
+                                    android:text="24"
                                     android:textColor="@color/cr_azul_oscuro"
                                     android:textSize="15sp"
                                     android:textStyle="bold" />
@@ -294,7 +303,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/card_titulo_tasacion"
+                                android:text="@string/card_titulo_rendimiento"
                                 android:textColor="@color/cr_gris_claro"
                                 android:textSize="15sp" />
 
@@ -302,7 +311,7 @@
                                 android:id="@+id/txtImpTasacion2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/cr_general_pordefinir"
+                                android:text="1.67% / 20.00%"
                                 android:textColor="@color/cr_azul_oscuro"
                                 android:textSize="15sp"
                                 android:textStyle="bold" />
@@ -311,11 +320,20 @@
 
                     </LinearLayout>
 
+                    <ProgressBar
+                        android:id="@+id/pgbPctInvertido2"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:progress="30"
+                        android:max="100"
+                        android:progressDrawable="@drawable/custom_progressbar"/>
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/scvSolicitud3"
+                android:id="@+id/scvOportunidad3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="10dp"
@@ -372,12 +390,12 @@
                                     android:layout_width="120dp"
                                     android:layout_height="25dp"
                                     android:layout_marginLeft="10dp"
-                                    android:background="@color/cr_perfilriesgo_pordefinir"
+                                    android:background="@color/cr_perfilriesgo_moderado"
                                     android:gravity="center"
                                     android:paddingHorizontal="20dp"
                                     android:shadowRadius="50"
-                                    android:text="@string/cr_perfilriesgo_pendiente"
-                                    android:textColor="@color/white"
+                                    android:text="@string/cr_perfilriesgo_moderado"
+                                    android:textColor="@color/cr_azul_oscuro2"
                                     android:textSize="12sp"
                                     android:textStyle="bold" />
 
@@ -386,7 +404,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/card_titulo_fecvigenciafin"
+                                android:text="@string/card_titulo_impganancia"
                                 android:textColor="@color/cr_gris_claro"
                                 android:textSize="15sp" />
 
@@ -394,7 +412,7 @@
                                 android:id="@+id/txtFecVigenciaFin3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="25/08/2023"
+                                android:text="S/. 2,000.00"
                                 android:textColor="@color/cr_azul_oscuro"
                                 android:textSize="15sp"
                                 android:textStyle="bold" />
@@ -412,7 +430,7 @@
                                 android:id="@+id/txtImpPrestamo3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="S/. 50,000.00"
+                                android:text="S/. 10,000.00"
                                 android:textColor="@color/cr_azul_oscuro"
                                 android:textSize="18sp"
                                 android:textStyle="bold" />
@@ -425,7 +443,7 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/card_titulo_ratio"
+                                    android:text="@string/card_titulo_plazo"
                                     android:textColor="@color/cr_gris_claro"
                                     android:textSize="15sp" />
 
@@ -433,7 +451,7 @@
                                     android:id="@+id/txtPctRatio3"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="0.00%"
+                                    android:text="12"
                                     android:textColor="@color/cr_azul_oscuro"
                                     android:textSize="15sp"
                                     android:textStyle="bold" />
@@ -443,7 +461,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/card_titulo_tasacion"
+                                android:text="@string/card_titulo_rendimiento"
                                 android:textColor="@color/cr_gris_claro"
                                 android:textSize="15sp" />
 
@@ -451,7 +469,7 @@
                                 android:id="@+id/txtImpTasacion3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/cr_general_pordefinir"
+                                android:text="1.67% / 20.00%"
                                 android:textColor="@color/cr_azul_oscuro"
                                 android:textSize="15sp"
                                 android:textStyle="bold" />
@@ -460,11 +478,20 @@
 
                     </LinearLayout>
 
+                    <ProgressBar
+                        android:id="@+id/pgbPctInvertido3"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:progress="30"
+                        android:max="100"
+                        android:progressDrawable="@drawable/custom_progressbar"/>
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/scvSolicitud4"
+                android:id="@+id/scvOportunidad4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="10dp"
@@ -521,11 +548,11 @@
                                     android:layout_width="120dp"
                                     android:layout_height="25dp"
                                     android:layout_marginLeft="10dp"
-                                    android:background="@color/cr_perfilriesgo_pordefinir"
+                                    android:background="@color/cr_perfilriesgo_medio"
                                     android:gravity="center"
                                     android:paddingHorizontal="20dp"
                                     android:shadowRadius="50"
-                                    android:text="@string/cr_perfilriesgo_pendiente"
+                                    android:text="@string/cr_perfilriesgo_medio"
                                     android:textColor="@color/white"
                                     android:textSize="12sp"
                                     android:textStyle="bold" />
@@ -535,7 +562,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/card_titulo_fecvigenciafin"
+                                android:text="@string/card_titulo_impganancia"
                                 android:textColor="@color/cr_gris_claro"
                                 android:textSize="15sp" />
 
@@ -543,7 +570,7 @@
                                 android:id="@+id/txtFecVigenciaFin4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="25/08/2023"
+                                android:text="S/. 4,000.00"
                                 android:textColor="@color/cr_azul_oscuro"
                                 android:textSize="15sp"
                                 android:textStyle="bold" />
@@ -561,7 +588,7 @@
                                 android:id="@+id/txtImpPrestamo4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="S/. 50,000.00"
+                                android:text="S/. 10,000.00"
                                 android:textColor="@color/cr_azul_oscuro"
                                 android:textSize="18sp"
                                 android:textStyle="bold" />
@@ -574,7 +601,7 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/card_titulo_ratio"
+                                    android:text="@string/card_titulo_plazo"
                                     android:textColor="@color/cr_gris_claro"
                                     android:textSize="15sp" />
 
@@ -582,7 +609,7 @@
                                     android:id="@+id/txtPctRatio4"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="0.00%"
+                                    android:text="24"
                                     android:textColor="@color/cr_azul_oscuro"
                                     android:textSize="15sp"
                                     android:textStyle="bold" />
@@ -592,7 +619,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/card_titulo_tasacion"
+                                android:text="@string/card_titulo_rendimiento"
                                 android:textColor="@color/cr_gris_claro"
                                 android:textSize="15sp" />
 
@@ -600,7 +627,7 @@
                                 android:id="@+id/txtImpTasacion4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/cr_general_pordefinir"
+                                android:text="1.67% / 20.00%"
                                 android:textColor="@color/cr_azul_oscuro"
                                 android:textSize="15sp"
                                 android:textStyle="bold" />
@@ -608,6 +635,15 @@
                         </LinearLayout>
 
                     </LinearLayout>
+
+                    <ProgressBar
+                        android:id="@+id/pgbPctInvertido4"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:progress="30"
+                        android:max="100"
+                        android:progressDrawable="@drawable/custom_progressbar"/>
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

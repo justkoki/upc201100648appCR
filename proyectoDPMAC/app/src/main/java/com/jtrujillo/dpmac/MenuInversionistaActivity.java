@@ -29,6 +29,7 @@ public class MenuInversionistaActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.appBarMenuInversionista.toolbar);
+        /*
         binding.appBarMenuInversionista.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -36,12 +37,13 @@ public class MenuInversionistaActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        */
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_dashboard, R.id.nav_oportunidades, R.id.nav_mis_inversiones, R.id.nav_mis_inversiones_en_cobranza, R.id.nav_mis_inversiones_terminadas)
+                R.id.nav_dashboard, R.id.nav_oportunidades, R.id.nav_misinversiones, R.id.nav_misinversiones_encobranza, R.id.nav_misinversiones_terminadas)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_menu_inversionista);

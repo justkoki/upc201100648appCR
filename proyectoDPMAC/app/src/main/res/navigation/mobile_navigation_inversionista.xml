@@ -18,22 +18,22 @@
         tools:layout="@layout/fragment_oportunidades" />
 
     <fragment
-        android:id="@+id/nav_mis_inversiones"
-        android:name="com.jtrujillo.dpmac.ui.oportunidades.OportunidadesFragment"
+        android:id="@+id/nav_misinversiones"
+        android:name="com.jtrujillo.dpmac.ui.misinversiones.MisinversionesFragment"
         android:label="@string/menu_mis_inversiones"
-        tools:layout="@layout/fragment_oportunidades" />
+        tools:layout="@layout/fragment_misinversiones" />
 
     <fragment
-        android:id="@+id/nav_mis_inversiones_en_cobranza"
-        android:name="com.jtrujillo.dpmac.ui.oportunidades.OportunidadesFragment"
+        android:id="@+id/nav_misinversiones_encobranza"
+        android:name="com.jtrujillo.dpmac.ui.misinversionesencobranza.MisinversionesEncobranzaFragment"
         android:label="@string/menu_mis_inversiones_en_cobranza"
-        tools:layout="@layout/fragment_oportunidades" />
+        tools:layout="@layout/fragment_misinversiones_encobranza" />
 
     <fragment
-        android:id="@+id/nav_mis_inversiones_terminadas"
-        android:name="com.jtrujillo.dpmac.ui.oportunidades.OportunidadesFragment"
+        android:id="@+id/nav_misinversiones_terminadas"
+        android:name="com.jtrujillo.dpmac.ui.misinversionesterminadas.MisinversionesTerminadasFragment"
         android:label="@string/menu_mis_inversiones_terminadas"
-        tools:layout="@layout/fragment_oportunidades" />
+        tools:layout="@layout/fragment_misinversiones_terminadas" />
 
     <fragment
         android:id="@+id/nav_usuario_actualizar"
