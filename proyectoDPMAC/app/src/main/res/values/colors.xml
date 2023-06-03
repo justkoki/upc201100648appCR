@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="cr_perfilriesgo_pordefinir">#969FAA</color>
+    <color name="cr_perfilriesgo_bajo">#13CE66</color>
+    <color name="cr_perfilriesgo_moderado">#FFDC5C</color>
+    <color name="cr_perfilriesgo_medio">#FF9052</color>
     <color name="cr_marron_oscuro">#464646</color>
     <color name="cr_marron_claro">#918264</color>
+    <color name="cr_marron_claro_alpha">#36918264</color>
     <color name="cr_azul_oscuro">#1F2D3D</color>
     <color name="cr_azul_oscuro2">#343F4B</color>
     <color name="cr_gris_claro">#8492A6</color>

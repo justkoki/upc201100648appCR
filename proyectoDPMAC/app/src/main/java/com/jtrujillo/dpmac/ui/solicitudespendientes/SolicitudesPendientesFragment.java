@@ -11,6 +11,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.ScrollView;
+import android.widget.TextView;
 
 import com.jtrujillo.dpmac.R;
 
@@ -25,7 +28,9 @@ public class SolicitudesPendientesFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_solicitudes_pendientes, container, false);
+        View v = inflater.inflate(R.layout.fragment_solicitudes_pendientes, container, false);
+
+        return v;
     }
 
     @Override

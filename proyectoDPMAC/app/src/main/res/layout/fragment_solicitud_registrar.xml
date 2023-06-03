@@ -34,6 +34,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:height="48dp"
+                        android:inputType="text"
                         android:hint="Motivo"
                         android:textColor="@color/cr_azul_oscuro" />
 
@@ -54,6 +55,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:height="48dp"
+                        android:inputType="textMultiLine"
                         android:hint="Descripción"
                         android:textColor="@color/cr_azul_oscuro" />
 
@@ -116,6 +118,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:height="48dp"
+                        android:inputType="text"
                         android:hint="Tipo de inmueble"
                         android:textColor="@color/cr_azul_oscuro" />
 
@@ -136,6 +139,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:height="48dp"
+                        android:inputType="number"
                         android:hint="Nro. de partida de SUNARP"
                         android:textColor="@color/cr_azul_oscuro" />
 
@@ -156,6 +160,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:height="48dp"
+                        android:inputType="numberDecimal"
                         android:hint="Importe del Préstamo"
                         android:textColor="@color/cr_azul_oscuro" />
 
@@ -176,6 +181,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:height="48dp"
+                        android:inputType="number"
                         android:hint="Plazo (meses)"
                         android:textColor="@color/cr_azul_oscuro" />
 
@@ -196,6 +202,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:height="48dp"
+                        android:inputType="numberDecimal"
                         android:hint="TIR (% Tasa Interna de Retorno)"
                         android:textColor="@color/cr_azul_oscuro" />
 
@@ -235,6 +242,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:height="48dp"
+                        android:inputType="text"
                         android:hint="Dirección"
                         android:textColor="@color/cr_azul_oscuro" />
 
@@ -255,6 +263,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:height="48dp"
+                        android:inputType="numberSigned"
                         android:hint="Latitud"
                         android:textColor="@color/cr_azul_oscuro" />
 
@@ -275,6 +284,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:height="48dp"
+                        android:inputType="numberSigned"
                         android:hint="Longitud"
                         android:textColor="@color/cr_azul_oscuro" />
 
@@ -283,6 +293,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
+
     </ScrollView>
 
 </FrameLayout>

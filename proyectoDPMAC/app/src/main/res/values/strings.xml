@@ -22,6 +22,22 @@
     <string name="menu_usuario_actualizar">Modificar Perfil</string>
     <string name="menu_logout">Cerrar Sesión</string>
 
+    <string name="card_titulo_riesgo">Riesgo:</string>
+    <string name="card_titulo_fecvigenciafin">Fecha de cierre:</string>
+    <string name="card_titulo_tasacion">Valorización:</string>
+    <string name="card_titulo_ratio">Ratio:</string>
+    <string name="card_titulo_disponible">Disponible:</string>
+    <string name="card_titulo_rendimiento">Rendimiento / TIR:</string>
+
+    <string name="cr_oportunidadtipo_casa">Casa</string>
+    <string name="cr_oportunidadtipo_departamento">Departamento</string>
+    <string name="cr_oportunidadtipo_lote">Lote</string>
+
+    <string name="cr_perfilriesgo_pendiente">PENDIENTE</string>
+    <string name="cr_perfilriesgo_bajo">BAJO</string>
+    <string name="cr_perfilriesgo_moderado">MODERADO</string>
+    <string name="cr_perfilriesgo_medio">MEDIO</string>
+
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
