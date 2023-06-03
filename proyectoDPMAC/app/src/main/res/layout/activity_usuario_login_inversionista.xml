@@ -7,26 +7,27 @@
     android:layout_height="match_parent"
     tools:context=".UsuarioLoginInversionistaActivity"
     android:orientation="vertical"
-    android:gravity="top">
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_gravity="center"
+        android:src="@drawable/logo_cr"
+        android:contentDescription="Logo"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="620dp">
-
-        <ImageView
-            android:id="@+id/imgLogo"
-            android:layout_width="250dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="150dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:src="@drawable/logo_cr"
-            android:contentDescription="Logo"/>
+        android:layout_height="300dp">
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/txtLayoutCorreo"
-            android:layout_width="409dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
@@ -34,7 +35,7 @@
             app:startIconDrawable="@drawable/ic_menu_gallery"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imgLogo">
+            app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/txtCorreo"
@@ -45,7 +46,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/txtLayoutContraseña"
-            android:layout_width="409dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
