@@ -3,14 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation_inversionista"
-    app:startDestination="@+id/nav_oportunidades">
-<!--
+    app:startDestination="@+id/nav_dashboard">
+
     <fragment
         android:id="@+id/nav_dashboard"
-        android:name="com.jtrujillo.dpmac.ui.home.HomeFragment"
+        android:name="com.jtrujillo.dpmac.ui.dashboard.DashboardFragment"
         android:label="@string/menu_dashboard"
         tools:layout="@layout/fragment_dashboard" />
--->
+
     <fragment
         android:id="@+id/nav_oportunidades"
         android:name="com.jtrujillo.dpmac.ui.oportunidades.OportunidadesFragment"
@@ -34,4 +34,16 @@
         android:name="com.jtrujillo.dpmac.ui.oportunidades.OportunidadesFragment"
         android:label="@string/menu_mis_inversiones_terminadas"
         tools:layout="@layout/fragment_oportunidades" />
+
+    <fragment
+        android:id="@+id/nav_usuario_actualizar"
+        android:name="com.jtrujillo.dpmac.UsuarioLogoutFragment"
+        android:label="@string/menu_usuario_actualizar"
+        tools:layout="@layout/fragment_usuario_logout" />
+
+    <fragment
+        android:id="@+id/nav_logout"
+        android:name="com.jtrujillo.dpmac.UsuarioLogoutFragment"
+        android:label="@string/menu_logout"
+        tools:layout="@layout/fragment_usuario_logout" />
 </navigation>

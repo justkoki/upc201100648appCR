@@ -1,12 +1,16 @@
 package com.jtrujillo.dpmac;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.annotation.NonNull;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -16,7 +20,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.jtrujillo.dpmac.databinding.ActivityMenuSolicitanteBinding;
 
-public class MenuSolicitanteActivity extends AppCompatActivity {
+public class MenuSolicitanteActivity extends AppCompatActivity /*implements NavigationView.OnNavigationItemSelectedListener*/ {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMenuSolicitanteBinding binding;
@@ -62,4 +66,18 @@ public class MenuSolicitanteActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+    /*@Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        int idNavItem = item.getItemId();
+        Toast.makeText(getApplicationContext(), idNavItem, Toast.LENGTH_LONG).show();
+        if (idNavItem == R.id.nav_logout) {
+            Toast.makeText(getApplicationContext(), "nav_logout", Toast.LENGTH_LONG).show();
+            //Intent i = new Intent(this, InicioActivity.class);
+            //startActivity(i);
+        }
+        //if (idNavItem == R.id.nav_usuario_actualizar) {}
+
+        return true;
+    }*/
 }

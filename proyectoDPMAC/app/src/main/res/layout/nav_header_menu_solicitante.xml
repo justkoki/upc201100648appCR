@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         android:text="Solicitante"
-        android:textColor="#343F4B"
+        android:textColor="@color/cr_azul_oscuro2"
         android:textSize="16sp"
         android:textStyle="bold"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
@@ -36,7 +36,7 @@
         android:id="@+id/txtCorreo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#343F4B"
+        android:textColor="@color/cr_azul_oscuro2"
         android:textSize="14sp"
         android:text="usuario@gmail.com" />
 </LinearLayout>

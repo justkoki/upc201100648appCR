@@ -28,4 +28,16 @@
         android:name="com.jtrujillo.dpmac.ui.solicitudespendientes.SolicitudesPendientesFragment"
         android:label="@string/menu_solicitudes_aprobadas"
         tools:layout="@layout/fragment_solicitudes_pendientes" />
+
+    <fragment
+        android:id="@+id/nav_usuario_actualizar"
+        android:name="com.jtrujillo.dpmac.UsuarioLogoutFragment"
+        android:label="@string/menu_usuario_actualizar"
+        tools:layout="@layout/fragment_usuario_logout" />
+
+    <fragment
+        android:id="@+id/nav_logout"
+        android:name="com.jtrujillo.dpmac.UsuarioLogoutFragment"
+        android:label="@string/menu_logout"
+        tools:layout="@layout/fragment_usuario_logout" />
 </navigation>

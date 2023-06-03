@@ -1,10 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.dashboard.DashboardFragment">
+    tools:context=".ui.dashboard.DashboardFragment"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="textStart"
+        android:textSize="40sp"
+        android:text="Portafolio actual"
+        android:textStyle="bold"
+        android:textColor="@color/cr_azul_oscuro" />
+
+    <TextView
+        android:id="@+id/txtImpOperacionTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:text="S/. 50,000.00"
+        android:textStyle="bold"
+        android:textColor="@color/cr_azul_oscuro" />
+
+    <TextView
+        android:id="@+id/txtNumOperacionTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:text="En 2 operaciones"
+        android:textColor="@color/cr_gris_claro"/>
+
+    <LinearLayout
+        android:id="@+id/layGanancia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtImpGanancia"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:gravity="center|end"
+            android:textSize="30sp"
+            android:text="S/. 10,000.00"
+            android:textStyle="bold"
+            android:textColor="@color/cr_azul_oscuro"
+            android:layout_weight="4" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/sep_vertical100"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/txtPctGanancia"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:gravity="center|start"
+            android:textSize="30sp"
+            android:text="20%"
+            android:textStyle="bold"
+            android:textColor="@color/cr_azul_oscuro"
+            android:layout_weight="4" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:text="Total ganancia estimada"
+        android:textColor="@color/cr_gris_claro"/>
 
     <TextView
         android:id="@+id/text_dashboard"
@@ -19,4 +102,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

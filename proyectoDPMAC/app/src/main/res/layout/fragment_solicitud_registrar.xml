@@ -1,13 +1,288 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.solicitudregistrar.SolicitudRegistrarFragment">
 
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello" />
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txtLayoutNomOportunidad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintTextColor="@color/cr_gris_claro"
+                    app:startIconDrawable="@drawable/icon_edit_24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtNomOportunidad"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:height="48dp"
+                        android:hint="Motivo"
+                        android:textColor="@color/cr_azul_oscuro" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txtLayoutDesOportunidad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintTextColor="@color/cr_gris_claro"
+                    app:startIconDrawable="@drawable/icon_edit_24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtLayoutNomOportunidad">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtDesOportunidad"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:height="48dp"
+                        android:hint="Descripción"
+                        android:textColor="@color/cr_azul_oscuro" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txtLayoutFecVigenciaInicio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintTextColor="@color/cr_gris_claro"
+                    app:startIconDrawable="@drawable/icon_datepicker_24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtLayoutDesOportunidad">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtFecVigenciaInicio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:height="48dp"
+                        android:inputType="date"
+                        android:hint="Fecha de Vigencia Desde"
+                        android:textColor="@color/cr_azul_oscuro" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txtLayoutFecVigenciaFin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintTextColor="@color/cr_gris_claro"
+                    app:startIconDrawable="@drawable/icon_datepicker_24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtLayoutFecVigenciaInicio">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtFecVigenciaFin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:height="48dp"
+                        android:inputType="date"
+                        android:hint="Fecha de Vigencia Hasta"
+                        android:textColor="@color/cr_azul_oscuro" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txtLayoutIdOportunidadTipo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintTextColor="@color/cr_gris_claro"
+                    app:startIconDrawable="@drawable/icon_edit_24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtLayoutFecVigenciaFin">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtIdOportunidadTipo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:height="48dp"
+                        android:hint="Tipo de inmueble"
+                        android:textColor="@color/cr_azul_oscuro" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txtLayoutNumPartidaSunarp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintTextColor="@color/cr_gris_claro"
+                    app:startIconDrawable="@drawable/icon_numbers_24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtLayoutIdOportunidadTipo">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtNumPartidaSunarp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:height="48dp"
+                        android:hint="Nro. de partida de SUNARP"
+                        android:textColor="@color/cr_azul_oscuro" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txtLayoutImpPrestamo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintTextColor="@color/cr_gris_claro"
+                    app:startIconDrawable="@drawable/icon_money_24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtLayoutNumPartidaSunarp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtImpPrestamo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:height="48dp"
+                        android:hint="Importe del Préstamo"
+                        android:textColor="@color/cr_azul_oscuro" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txtLayoutNumMesPlazo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintTextColor="@color/cr_gris_claro"
+                    app:startIconDrawable="@drawable/icon_edit_24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtLayoutImpPrestamo">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtNumMesPlazo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:height="48dp"
+                        android:hint="Plazo (meses)"
+                        android:textColor="@color/cr_azul_oscuro" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txtLayoutNumTir"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintTextColor="@color/cr_gris_claro"
+                    app:startIconDrawable="@drawable/icon_numbers_24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtLayoutNumMesPlazo">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtNumTir"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:height="48dp"
+                        android:hint="TIR (% Tasa Interna de Retorno)"
+                        android:textColor="@color/cr_azul_oscuro" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txtLayoutNomFoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:gravity="center"
+                    android:pointerIcon="hand"
+                    app:hintTextColor="@color/cr_gris_claro"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtLayoutNumTir">
+
+                    <ImageView
+                        android:id="@+id/imgNomFoto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/img_preview225"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txtLayoutDesDireccion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintTextColor="@color/cr_gris_claro"
+                    app:startIconDrawable="@drawable/icon_edit_24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtLayoutNomFoto">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtDesDireccion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:height="48dp"
+                        android:hint="Dirección"
+                        android:textColor="@color/cr_azul_oscuro" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txtLayoutNumLatitudMapa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintTextColor="@color/cr_gris_claro"
+                    app:startIconDrawable="@drawable/icon_numbers_24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtLayoutDesDireccion">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtNumLatitudMapa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:height="48dp"
+                        android:hint="Latitud"
+                        android:textColor="@color/cr_azul_oscuro" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txtLayoutNumLongitudMapa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintTextColor="@color/cr_gris_claro"
+                    app:startIconDrawable="@drawable/icon_numbers_24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtLayoutNumLatitudMapa">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtNumLongitudMapa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:height="48dp"
+                        android:hint="Longitud"
+                        android:textColor="@color/cr_azul_oscuro" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
 
 </FrameLayout>

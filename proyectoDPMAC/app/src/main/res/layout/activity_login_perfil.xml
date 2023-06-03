@@ -29,7 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:background="#75674C"
+            android:background="@color/cr_marron_claro"
             android:textColor="@color/white"
             android:width="300dp"
             android:text="Loguearme como solicitante"
@@ -42,7 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:background="#75674C"
+            android:background="@color/cr_marron_claro"
             android:textColor="@color/white"
             android:width="300dp"
             android:text="Loguearme como inversionista"
@@ -61,7 +61,7 @@
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:layout_weight="1"
-            android:background="#75674C"
+            android:background="@color/cr_marron_claro"
             android:textColor="@color/white"
             android:text="Registrarse" />
 
@@ -70,7 +70,7 @@
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:layout_weight="1"
-            android:background="#75674C"
+            android:background="@color/cr_marron_claro"
             android:textColor="@color/white"
             android:text="Regresar" />
     </LinearLayout>

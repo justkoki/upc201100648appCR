@@ -19,6 +19,8 @@
     <string name="menu_mis_inversiones">Mis Inversiones</string>
     <string name="menu_mis_inversiones_en_cobranza">Mis Inv. en Cobranza</string>
     <string name="menu_mis_inversiones_terminadas">Mis Inv. en Terminadas</string>
+    <string name="menu_usuario_actualizar">Modificar Perfil</string>
+    <string name="menu_logout">Cerrar Sesión</string>
 
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Email</string>
