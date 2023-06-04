@@ -19,9 +19,15 @@
 
     <fragment
         android:id="@+id/nav_oportunidadesmapa"
-        android:name="com.jtrujillo.dpmac.ui.oportunidadesmapa.OportunidadesmapaFragment"
+        android:name="com.jtrujillo.dpmac.ui.oportunidades.OportunidadesmapaFragment"
         android:label="@string/menu_oportunidades"
         tools:layout="@layout/fragment_oportunidadesmapa" />
+
+    <fragment
+        android:id="@+id/nav_oportunidad_invertir"
+        android:name="com.jtrujillo.dpmac.ui.oportunidades.OportunidadInvertirFragment"
+        android:label="@string/menu_oportunidad_invertir"
+        tools:layout="@layout/fragment_oportunidad_invertir" />
 
     <fragment
         android:id="@+id/nav_misinversiones"
@@ -31,25 +37,25 @@
 
     <fragment
         android:id="@+id/nav_misinversiones_encobranza"
-        android:name="com.jtrujillo.dpmac.ui.misinversionesencobranza.MisinversionesEncobranzaFragment"
+        android:name="com.jtrujillo.dpmac.ui.misinversiones.MisinversionesEncobranzaFragment"
         android:label="@string/menu_mis_inversiones_en_cobranza"
         tools:layout="@layout/fragment_misinversiones_encobranza" />
 
     <fragment
         android:id="@+id/nav_misinversiones_terminadas"
-        android:name="com.jtrujillo.dpmac.ui.misinversionesterminadas.MisinversionesTerminadasFragment"
+        android:name="com.jtrujillo.dpmac.ui.misinversiones.MisinversionesTerminadasFragment"
         android:label="@string/menu_mis_inversiones_terminadas"
         tools:layout="@layout/fragment_misinversiones_terminadas" />
 
     <fragment
-        android:id="@+id/nav_usuario_actualizar"
-        android:name="com.jtrujillo.dpmac.UsuarioLogoutFragment"
+        android:id="@+id/nav_usuario_actualizar_inversionista"
+        android:name="com.jtrujillo.dpmac.ui.usuarios.UsuarioActualizarInversionistaFragment"
         android:label="@string/menu_usuario_actualizar"
-        tools:layout="@layout/fragment_usuario_logout" />
+        tools:layout="@layout/fragment_usuario_actualizar_inversionista" />
 
     <fragment
         android:id="@+id/nav_logout"
-        android:name="com.jtrujillo.dpmac.UsuarioLogoutFragment"
+        android:name="com.jtrujillo.dpmac.ui.usuarios.UsuarioLogoutFragment"
         android:label="@string/menu_logout"
         tools:layout="@layout/fragment_usuario_logout" />
 </navigation>

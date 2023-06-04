@@ -1,4 +1,4 @@
-package com.jtrujillo.dpmac.ui.solicitudregistrar;
+package com.jtrujillo.dpmac.ui.solicitudes;
 
 import androidx.lifecycle.ViewModel;
 

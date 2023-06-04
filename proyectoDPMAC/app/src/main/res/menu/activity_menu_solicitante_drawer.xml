@@ -4,10 +4,12 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
+        <!--
         <item
             android:id="@+id/nav_solicitud_registrar"
             android:icon="@drawable/icon_menu_opennew_24dp"
             android:title="@string/menu_solicitud_registrar" />
+        -->
         <item
             android:id="@+id/nav_solicitudes_pendientes"
             android:icon="@drawable/icon_menu_managesearch_24dp"
@@ -21,10 +23,10 @@
             android:icon="@drawable/icon_menu_managesearch_24dp"
             android:title="@string/menu_solicitudes_aprobadas" />
     </group>
-    <item android:title="Opciones Generales">
+    <item android:title="">
         <menu>
             <item
-                android:id="@+id/nav_usuario_actualizar"
+                android:id="@+id/nav_usuario_actualizar_solicitante"
                 android:icon="@drawable/icon_menu_edit_24dp"
                 android:title="@string/menu_usuario_actualizar" />
             <item

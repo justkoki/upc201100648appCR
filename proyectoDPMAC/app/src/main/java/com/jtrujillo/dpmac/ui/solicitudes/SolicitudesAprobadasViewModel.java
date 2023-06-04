@@ -1,4 +1,4 @@
-package com.jtrujillo.dpmac.ui.solicitudesaprobadas;
+package com.jtrujillo.dpmac.ui.solicitudes;
 
 import androidx.lifecycle.ViewModel;
 

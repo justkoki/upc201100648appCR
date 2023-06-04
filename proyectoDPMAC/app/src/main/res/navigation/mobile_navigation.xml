@@ -25,25 +25,25 @@
 
     <fragment
         android:id="@+id/nav_solicitud_registrar"
-        android:name="com.jtrujillo.dpmac.ui.solicitudregistrar.SolicitudRegistrarFragment"
+        android:name="com.jtrujillo.dpmac.ui.solicitudes.SolicitudRegistrarFragment"
         android:label="@string/menu_solicitud_registrar"
         tools:layout="@layout/fragment_solicitud_registrar" />
 
     <fragment
         android:id="@+id/nav_solicitudes_pendientes"
-        android:name="com.jtrujillo.dpmac.ui.solicitudespendientes.SolicitudesPendientesFragment"
+        android:name="com.jtrujillo.dpmac.ui.solicitudes.SolicitudesPendientesFragment"
         android:label="@string/menu_solicitudes_pendientes"
         tools:layout="@layout/fragment_solicitudes_pendientes" />
 
     <fragment
         android:id="@+id/nav_solicitudes_en_revision"
-        android:name="com.jtrujillo.dpmac.ui.solicitudespendientes.SolicitudesPendientesFragment"
+        android:name="com.jtrujillo.dpmac.ui.solicitudes.SolicitudesPendientesFragment"
         android:label="@string/menu_solicitudes_en_revision"
         tools:layout="@layout/fragment_solicitudes_pendientes" />
 
     <fragment
         android:id="@+id/nav_solicitudes_aprobadas"
-        android:name="com.jtrujillo.dpmac.ui.solicitudespendientes.SolicitudesPendientesFragment"
+        android:name="com.jtrujillo.dpmac.ui.solicitudes.SolicitudesPendientesFragment"
         android:label="@string/menu_solicitudes_aprobadas"
         tools:layout="@layout/fragment_solicitudes_pendientes" />
 </navigation>

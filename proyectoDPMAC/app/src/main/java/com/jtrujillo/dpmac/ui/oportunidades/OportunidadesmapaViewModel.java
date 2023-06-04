@@ -1,4 +1,4 @@
-package com.jtrujillo.dpmac.ui.oportunidadesmapa;
+package com.jtrujillo.dpmac.ui.oportunidades;
 
 import androidx.lifecycle.ViewModel;
 

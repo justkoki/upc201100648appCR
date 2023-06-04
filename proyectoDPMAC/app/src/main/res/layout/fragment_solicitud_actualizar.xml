@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.solicitudes.SolicitudRegistrarFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.solicitudes.SolicitudActualizarFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -23,6 +23,7 @@
                     android:id="@+id/txtLayoutNomFoto"
                     android:layout_width="match_parent"
                     android:layout_height="250dp"
+                    android:layout_marginTop="20dp"
                     android:gravity="center"
                     android:pointerIcon="hand"
                     app:hintTextColor="@color/cr_gris_claro"
@@ -34,7 +35,7 @@
                         android:id="@+id/imgNomFoto"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/img_preview225"/>
+                        android:src="@drawable/img_casa01"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -55,6 +56,7 @@
                         android:height="48dp"
                         android:inputType="text"
                         android:hint="Motivo"
+                        android:text="Capital de trabajo"
                         android:textColor="@color/cr_azul_oscuro" />
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -77,6 +79,7 @@
                         android:height="100dp"
                         android:inputType="textMultiLine"
                         android:hint="Descripción"
+                        android:text="Solicito préstamo para capital de trabajo, en el cual ya tengo el negocio cerrado."
                         android:textColor="@color/cr_azul_oscuro" />
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -98,6 +101,7 @@
                         android:height="48dp"
                         android:inputType="date"
                         android:hint="Fecha de Vigencia Desde"
+                        android:text="04/05/2023"
                         android:textColor="@color/cr_azul_oscuro" />
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -119,6 +123,7 @@
                         android:height="48dp"
                         android:inputType="date"
                         android:hint="Fecha de Vigencia Hasta"
+                        android:text="25/08/2023"
                         android:textColor="@color/cr_azul_oscuro" />
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -140,6 +145,7 @@
                         android:height="48dp"
                         android:inputType="text"
                         android:hint="Tipo de inmueble"
+                        android:text="Casa"
                         android:textColor="@color/cr_azul_oscuro" />
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -161,6 +167,7 @@
                         android:height="48dp"
                         android:inputType="numberDecimal"
                         android:hint="Importe del Préstamo"
+                        android:text="S/. 50,000.00"
                         android:textColor="@color/cr_azul_oscuro" />
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -182,6 +189,7 @@
                         android:height="48dp"
                         android:inputType="number"
                         android:hint="Plazo (meses)"
+                        android:text="24"
                         android:textColor="@color/cr_azul_oscuro" />
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -203,6 +211,7 @@
                         android:height="48dp"
                         android:inputType="numberDecimal"
                         android:hint="TIR (% Tasa Interna de Retorno)"
+                        android:text="20.00"
                         android:textColor="@color/cr_azul_oscuro" />
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -224,6 +233,7 @@
                         android:height="48dp"
                         android:inputType="text"
                         android:hint="Dirección"
+                        android:text="Av. Los desamparados 123"
                         android:textColor="@color/cr_azul_oscuro" />
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -245,6 +255,7 @@
                         android:height="48dp"
                         android:inputType="numberSigned"
                         android:hint="Latitud"
+                        android:text="-76.123456"
                         android:textColor="@color/cr_azul_oscuro" />
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -266,6 +277,7 @@
                         android:height="48dp"
                         android:inputType="numberSigned"
                         android:hint="Longitud"
+                        android:text="-12.123456"
                         android:textColor="@color/cr_azul_oscuro" />
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -273,7 +285,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <Button
-                android:id="@+id/btnSolicitudRegistrar"
+                android:id="@+id/btnSolicitudActualizar"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_gravity="bottom"
@@ -283,7 +295,7 @@
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 android:textSize="18dp"
-                android:text="Guardar"/>
+                android:text="Actualizar"/>
 
         </LinearLayout>
 

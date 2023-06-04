@@ -95,7 +95,7 @@
             android:id="@+id/btnRegistrarse"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/cr_marron_claro"
+            android:background="@color/cr_azul_oscuro"
             android:textColor="@color/white"
             android:text="Registrarse" />
 

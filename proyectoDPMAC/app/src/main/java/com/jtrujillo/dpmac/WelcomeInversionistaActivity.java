@@ -23,7 +23,6 @@ public class WelcomeInversionistaActivity extends AppCompatActivity {
                 bndDatos.putInt("idUsuarioTipo", 3);
 
                 Intent i = new Intent(WelcomeInversionistaActivity.this, MenuInversionistaActivity.class);
-                //Intent i = new Intent(WelcomeInversionistaActivity.this, MainActivity.class);
                 i.putExtras(bndDatos);
                 startActivity(i);
                 finish();

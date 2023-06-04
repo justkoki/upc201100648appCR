@@ -22,7 +22,6 @@ public class WelcomeSolicitanteActivity extends AppCompatActivity {
                 bndDatos.putInt("idUsuarioTipo", 2);
 
                 Intent i = new Intent(WelcomeSolicitanteActivity.this, MenuSolicitanteActivity.class);
-                //Intent i = new Intent(WelcomeSolicitanteActivity.this, MainActivity.class);
                 i.putExtras(bndDatos);
                 startActivity(i);
                 finish();

@@ -1,4 +1,4 @@
-package com.jtrujillo.dpmac.ui.solicitudesenrevision;
+package com.jtrujillo.dpmac.ui.solicitudes;
 
 import androidx.lifecycle.ViewModelProvider;
 

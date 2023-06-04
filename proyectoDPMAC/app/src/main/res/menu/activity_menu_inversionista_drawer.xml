@@ -10,29 +10,31 @@
             android:title="@string/menu_dashboard" />
         <item
             android:id="@+id/nav_oportunidades"
-            android:icon="@drawable/icon_menu_managesearch_24dp"
+            android:icon="@drawable/icon_menu_lightbulb_24dp"
             android:title="@string/menu_oportunidades" />
+        <!--
         <item
             android:id="@+id/nav_oportunidadesmapa"
             android:icon="@drawable/icon_menu_map_24dp"
             android:title="@string/menu_oportunidadesmapa" />
+        -->
         <item
             android:id="@+id/nav_misinversiones"
-            android:icon="@drawable/icon_menu_managesearch_24dp"
+            android:icon="@drawable/icon_menu_money_24dp"
             android:title="@string/menu_mis_inversiones" />
         <item
             android:id="@+id/nav_misinversiones_encobranza"
-            android:icon="@drawable/icon_menu_managesearch_24dp"
+            android:icon="@drawable/icon_menu_money_24dp"
             android:title="@string/menu_mis_inversiones_en_cobranza" />
         <item
             android:id="@+id/nav_misinversiones_terminadas"
-            android:icon="@drawable/icon_menu_managesearch_24dp"
+            android:icon="@drawable/icon_menu_money_24dp"
             android:title="@string/menu_mis_inversiones_terminadas" />
     </group>
-    <item android:title="Opciones Generales">
+    <item android:title="">
         <menu>
             <item
-                android:id="@+id/nav_usuario_actualizar"
+                android:id="@+id/nav_usuario_actualizar_inversionista"
                 android:icon="@drawable/icon_menu_edit_24dp"
                 android:title="@string/menu_usuario_actualizar" />
             <item

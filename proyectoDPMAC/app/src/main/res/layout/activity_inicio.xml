@@ -32,7 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:layout_weight="1"
-            android:background="@color/cr_marron_claro"
+            android:background="@color/cr_azul_oscuro"
             android:textColor="@color/white"
             android:text="Registrarse" />
 
@@ -41,7 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:layout_weight="1"
-            android:background="@color/cr_marron_claro"
+            android:background="@color/cr_azul_oscuro"
             android:textColor="@color/white"
             android:text="Iniciar Sesión" />
     </LinearLayout>

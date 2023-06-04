@@ -20,7 +20,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
-        android:background="#1E2D3E"
+        android:background="@color/cr_azul_oscuro"
         app:itemTextColor="@color/white"
         app:headerLayout="@layout/nav_header_menu_inversionista"
         app:menu="@menu/activity_menu_inversionista_drawer" />

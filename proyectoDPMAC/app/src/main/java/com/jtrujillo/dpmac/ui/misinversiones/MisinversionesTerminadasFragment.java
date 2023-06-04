@@ -1,4 +1,4 @@
-package com.jtrujillo.dpmac.ui.misinversionesencobranza;
+package com.jtrujillo.dpmac.ui.misinversiones;
 
 import androidx.lifecycle.ViewModelProvider;
 
@@ -14,24 +14,24 @@ import android.view.ViewGroup;
 
 import com.jtrujillo.dpmac.R;
 
-public class MisinversionesEncobranzaFragment extends Fragment {
+public class MisinversionesTerminadasFragment extends Fragment {
 
-    private MisinversionesEncobranzaViewModel mViewModel;
+    private MisinversionesTerminadasViewModel mViewModel;
 
-    public static MisinversionesEncobranzaFragment newInstance() {
-        return new MisinversionesEncobranzaFragment();
+    public static MisinversionesTerminadasFragment newInstance() {
+        return new MisinversionesTerminadasFragment();
     }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_misinversiones_encobranza, container, false);
+        return inflater.inflate(R.layout.fragment_misinversiones_terminadas, container, false);
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = new ViewModelProvider(this).get(MisinversionesEncobranzaViewModel.class);
+        mViewModel = new ViewModelProvider(this).get(MisinversionesTerminadasViewModel.class);
         // TODO: Use the ViewModel
     }
 

@@ -1,4 +1,4 @@
-package com.jtrujillo.dpmac.ui.misinversionesterminadas;
+package com.jtrujillo.dpmac.ui.misinversiones;
 
 import androidx.lifecycle.ViewModel;
 

@@ -1,4 +1,4 @@
-package com.jtrujillo.dpmac.ui.oportunidadesmapa;
+package com.jtrujillo.dpmac.ui.solicitudes;
 
 import androidx.lifecycle.ViewModelProvider;
 
@@ -14,24 +14,24 @@ import android.view.ViewGroup;
 
 import com.jtrujillo.dpmac.R;
 
-public class OportunidadesmapaFragment extends Fragment {
+public class SolicitudesAprobadasFragment extends Fragment {
 
-    private OportunidadesmapaViewModel mViewModel;
+    private SolicitudesAprobadasViewModel mViewModel;
 
-    public static OportunidadesmapaFragment newInstance() {
-        return new OportunidadesmapaFragment();
+    public static SolicitudesAprobadasFragment newInstance() {
+        return new SolicitudesAprobadasFragment();
     }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_oportunidadesmapa, container, false);
+        return inflater.inflate(R.layout.fragment_solicitudes_aprobadas, container, false);
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = new ViewModelProvider(this).get(OportunidadesmapaViewModel.class);
+        mViewModel = new ViewModelProvider(this).get(SolicitudesAprobadasViewModel.class);
         // TODO: Use the ViewModel
     }
 

@@ -1,4 +1,4 @@
-package com.jtrujillo.dpmac.ui.misinversionesencobranza;
+package com.jtrujillo.dpmac.ui.misinversiones;
 
 import androidx.lifecycle.ViewModel;
 

@@ -43,7 +43,9 @@ public class MenuInversionistaActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_dashboard, R.id.nav_oportunidades, R.id.nav_oportunidadesmapa, R.id.nav_misinversiones, R.id.nav_misinversiones_encobranza, R.id.nav_misinversiones_terminadas)
+                R.id.nav_dashboard, R.id.nav_oportunidades, /*R.id.nav_oportunidadesmapa, */
+                R.id.nav_misinversiones, R.id.nav_misinversiones_encobranza, R.id.nav_misinversiones_terminadas,
+                R.id.nav_usuario_actualizar_inversionista)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_menu_inversionista);

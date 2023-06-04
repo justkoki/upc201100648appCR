@@ -11,12 +11,14 @@
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="menu_solicitud_registrar">Registrar Solicitud</string>
+    <string name="menu_solicitud_actualizar">Actualizar Solicitud</string>
     <string name="menu_solicitudes_pendientes">Sol. Pendientes</string>
     <string name="menu_solicitudes_en_revision">Sol. En Revisión</string>
     <string name="menu_solicitudes_aprobadas">Sol. Aprobadas</string>
     <string name="menu_dashboard">Dashboard</string>
     <string name="menu_oportunidades">Oportunidades de Inversión</string>
     <string name="menu_oportunidadesmapa">Mapa de Oportunidades</string>
+    <string name="menu_oportunidad_invertir">Invertir</string>
     <string name="menu_mis_inversiones">Mis Inversiones</string>
     <string name="menu_mis_inversiones_en_cobranza">Mis Inv. en Cobranza</string>
     <string name="menu_mis_inversiones_terminadas">Mis Inv. en Terminadas</string>

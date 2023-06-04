@@ -1,10 +1,8 @@
-package com.jtrujillo.dpmac.ui.solicitudespendientes;
+package com.jtrujillo.dpmac.ui.solicitudes;
 
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
+import androidx.cardview.widget.CardView;
 import androidx.lifecycle.ViewModelProvider;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -17,19 +15,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ScrollView;
-import android.widget.TextView;
 
 import com.jtrujillo.dpmac.R;
-import com.jtrujillo.dpmac.RegistroPerfilActivity;
-import com.jtrujillo.dpmac.databinding.FragmentHomeBinding;
-import com.jtrujillo.dpmac.databinding.FragmentSolicitudesPendientesBinding;
-import com.jtrujillo.dpmac.ui.solicitudregistrar.SolicitudRegistrarFragment;
 
 public class SolicitudesPendientesFragment extends Fragment {
 
     Button btnSolicitudRegistrar;
+    CardView cvwSolicitud;
 
     private SolicitudesPendientesViewModel mViewModel;
 
@@ -42,12 +34,18 @@ public class SolicitudesPendientesFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_solicitudes_pendientes, container, false);
 
-        /*
         btnSolicitudRegistrar = (Button)view.findViewById(R.id.btnSolicitudRegistrar);
         btnSolicitudRegistrar.setOnClickListener(v -> {
             NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment_content_menu_solicitante);
             navController.navigate(R.id.nav_solicitud_registrar);
         });
+
+        cvwSolicitud = (CardView)view.findViewById(R.id.cvwSolicitud);
+        cvwSolicitud.setOnClickListener(v -> {
+            NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment_content_menu_solicitante);
+            navController.navigate(R.id.nav_solicitud_actualizar);
+        });
+        /*
         btnSolicitudRegistrar.setOnClickListener(new View.OnClickListener() {
 
             @Override

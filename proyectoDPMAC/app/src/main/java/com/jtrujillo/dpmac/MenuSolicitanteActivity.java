@@ -20,7 +20,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.jtrujillo.dpmac.databinding.ActivityMenuSolicitanteBinding;
 
-public class MenuSolicitanteActivity extends AppCompatActivity /*implements NavigationView.OnNavigationItemSelectedListener*/ {
+public class MenuSolicitanteActivity extends AppCompatActivity
+        /*implements NavigationView.OnNavigationItemSelectedListener*/ {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMenuSolicitanteBinding binding;
@@ -47,12 +48,16 @@ public class MenuSolicitanteActivity extends AppCompatActivity /*implements Navi
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_solicitud_registrar, R.id.nav_solicitudes_pendientes, R.id.nav_solicitudes_enrevision, R.id.nav_solicitudes_aprobadas)
+                /*R.id.nav_solicitud_registrar, */
+                R.id.nav_solicitudes_pendientes, R.id.nav_solicitudes_enrevision, R.id.nav_solicitudes_aprobadas,
+                R.id.nav_usuario_actualizar_solicitante)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_menu_solicitante);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+        //navigationView.setNavigationItemSelectedListener(this);
     }
 
     @Override
@@ -69,7 +74,8 @@ public class MenuSolicitanteActivity extends AppCompatActivity /*implements Navi
                 || super.onSupportNavigateUp();
     }
 
-    /*@Override
+    /*
+    @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int idNavItem = item.getItemId();
         Toast.makeText(getApplicationContext(), idNavItem, Toast.LENGTH_LONG).show();
@@ -79,7 +85,7 @@ public class MenuSolicitanteActivity extends AppCompatActivity /*implements Navi
             //startActivity(i);
         }
         //if (idNavItem == R.id.nav_usuario_actualizar) {}
-
         return true;
-    }*/
+    }
+    */
 }
