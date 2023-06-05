@@ -1,10 +1,8 @@
 package com.jtrujillo.dpmac;
 
 import android.os.Bundle;
-import android.view.View;
 import android.view.Menu;
 
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.navigation.NavController;
@@ -44,7 +42,7 @@ public class MenuInversionistaActivity extends AppCompatActivity {
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_dashboard, R.id.nav_oportunidades, /*R.id.nav_oportunidadesmapa, */
-                R.id.nav_misinversiones, R.id.nav_misinversiones_encobranza, R.id.nav_misinversiones_terminadas,
+                R.id.nav_inversiones, R.id.nav_inversiones_encobranza, R.id.nav_inversiones_terminadas,
                 R.id.nav_usuario_actualizar_inversionista)
                 .setOpenableLayout(drawer)
                 .build();

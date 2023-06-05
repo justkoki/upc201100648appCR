@@ -19,17 +19,17 @@
             android:title="@string/menu_oportunidadesmapa" />
         -->
         <item
-            android:id="@+id/nav_misinversiones"
+            android:id="@+id/nav_inversiones"
             android:icon="@drawable/icon_menu_money_24dp"
-            android:title="@string/menu_mis_inversiones" />
+            android:title="@string/menu_inversiones" />
         <item
-            android:id="@+id/nav_misinversiones_encobranza"
+            android:id="@+id/nav_inversiones_encobranza"
             android:icon="@drawable/icon_menu_money_24dp"
-            android:title="@string/menu_mis_inversiones_en_cobranza" />
+            android:title="@string/menu_inversiones_en_cobranza" />
         <item
-            android:id="@+id/nav_misinversiones_terminadas"
+            android:id="@+id/nav_inversiones_terminadas"
             android:icon="@drawable/icon_menu_money_24dp"
-            android:title="@string/menu_mis_inversiones_terminadas" />
+            android:title="@string/menu_inversiones_terminadas" />
     </group>
     <item android:title="">
         <menu>

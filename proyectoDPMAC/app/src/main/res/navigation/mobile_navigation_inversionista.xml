@@ -30,22 +30,40 @@
         tools:layout="@layout/fragment_oportunidad_invertir" />
 
     <fragment
-        android:id="@+id/nav_misinversiones"
-        android:name="com.jtrujillo.dpmac.ui.misinversiones.MisinversionesFragment"
-        android:label="@string/menu_mis_inversiones"
-        tools:layout="@layout/fragment_misinversiones" />
+        android:id="@+id/nav_inversiones"
+        android:name="com.jtrujillo.dpmac.ui.inversiones.InversionesFragment"
+        android:label="@string/menu_inversiones"
+        tools:layout="@layout/fragment_inversiones" />
 
     <fragment
-        android:id="@+id/nav_misinversiones_encobranza"
-        android:name="com.jtrujillo.dpmac.ui.misinversiones.MisinversionesEncobranzaFragment"
-        android:label="@string/menu_mis_inversiones_en_cobranza"
-        tools:layout="@layout/fragment_misinversiones_encobranza" />
+        android:id="@+id/nav_inversiones_encobranza"
+        android:name="com.jtrujillo.dpmac.ui.inversiones.InversionesEncobranzaFragment"
+        android:label="@string/menu_inversiones_en_cobranza"
+        tools:layout="@layout/fragment_inversiones_encobranza" />
 
     <fragment
-        android:id="@+id/nav_misinversiones_terminadas"
-        android:name="com.jtrujillo.dpmac.ui.misinversiones.MisinversionesTerminadasFragment"
-        android:label="@string/menu_mis_inversiones_terminadas"
-        tools:layout="@layout/fragment_misinversiones_terminadas" />
+        android:id="@+id/nav_inversiones_terminadas"
+        android:name="com.jtrujillo.dpmac.ui.inversiones.InversionesTerminadasFragment"
+        android:label="@string/menu_inversiones_terminadas"
+        tools:layout="@layout/fragment_inversiones_terminadas" />
+
+    <fragment
+        android:id="@+id/nav_inversion_ver"
+        android:name="com.jtrujillo.dpmac.ui.inversiones.InversionVerFragment"
+        android:label="@string/menu_inversion_ver"
+        tools:layout="@layout/fragment_inversion_ver" />
+
+    <fragment
+        android:id="@+id/nav_inversion_ver2"
+        android:name="com.jtrujillo.dpmac.ui.inversiones.InversionVer2Fragment"
+        android:label="@string/menu_inversion_ver"
+        tools:layout="@layout/fragment_inversion_ver2" />
+
+    <fragment
+        android:id="@+id/nav_inversion_ver3"
+        android:name="com.jtrujillo.dpmac.ui.inversiones.InversionVer3Fragment"
+        android:label="@string/menu_inversion_ver"
+        tools:layout="@layout/fragment_inversion_ver3" />
 
     <fragment
         android:id="@+id/nav_usuario_actualizar_inversionista"

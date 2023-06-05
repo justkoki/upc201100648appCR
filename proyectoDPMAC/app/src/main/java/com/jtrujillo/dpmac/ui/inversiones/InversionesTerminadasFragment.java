@@ -1,4 +1,4 @@
-package com.jtrujillo.dpmac.ui.solicitudes;
+package com.jtrujillo.dpmac.ui.inversiones;
 
 import androidx.cardview.widget.CardView;
 import androidx.lifecycle.ViewModelProvider;
@@ -17,25 +17,25 @@ import android.view.ViewGroup;
 
 import com.jtrujillo.dpmac.R;
 
-public class SolicitudesEnrevisionFragment extends Fragment {
+public class InversionesTerminadasFragment extends Fragment {
 
-    CardView cvwSolicitud;
+    CardView cvwOportunidad;
 
-    private SolicitudesEnrevisionViewModel mViewModel;
+    private InversionesTerminadasViewModel mViewModel;
 
-    public static SolicitudesEnrevisionFragment newInstance() {
-        return new SolicitudesEnrevisionFragment();
+    public static InversionesTerminadasFragment newInstance() {
+        return new InversionesTerminadasFragment();
     }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_solicitudes_enrevision, container, false);
+        View view = inflater.inflate(R.layout.fragment_inversiones_terminadas, container, false);
 
-        cvwSolicitud = (CardView)view.findViewById(R.id.cvwSolicitud);
-        cvwSolicitud.setOnClickListener(v -> {
-            NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment_content_menu_solicitante);
-            navController.navigate(R.id.nav_solicitud_ver);
+        cvwOportunidad = (CardView)view.findViewById(R.id.cvwOportunidad4);
+        cvwOportunidad.setOnClickListener(v -> {
+            NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment_content_menu_inversionista);
+            navController.navigate(R.id.nav_inversion_ver3);
         });
 
         return view;
@@ -44,7 +44,7 @@ public class SolicitudesEnrevisionFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = new ViewModelProvider(this).get(SolicitudesEnrevisionViewModel.class);
+        mViewModel = new ViewModelProvider(this).get(InversionesTerminadasViewModel.class);
         // TODO: Use the ViewModel
     }
 

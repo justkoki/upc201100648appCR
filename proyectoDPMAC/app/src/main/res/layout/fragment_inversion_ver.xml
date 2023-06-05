@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.inversiones.InversionVerFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="20dp">
+
+        <ImageView
+            android:id="@+id/imgNomFoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_casa01" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtNomOportunidadTipo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cr_oportunidadtipo_casa"
+                    android:textColor="@color/cr_azul_oscuro"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/card_titulo_riesgo"
+                        android:textColor="@color/cr_gris_claro"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/txtNomOportunidadPerfilRiesgo"
+                        android:layout_width="120dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/cr_perfilriesgo_moderado"
+                        android:gravity="center"
+                        android:paddingHorizontal="20dp"
+                        android:shadowRadius="50"
+                        android:text="@string/cr_perfilriesgo_moderado"
+                        android:textColor="@color/cr_azul_oscuro2"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/card_titulo_impganancia"
+                    android:textColor="@color/cr_gris_claro"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/txtFecVigenciaFin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="S/. 2,000.00"
+                    android:textColor="@color/cr_azul_oscuro"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtImpPrestamo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="S/. 10,000.00"
+                    android:textColor="@color/cr_azul_oscuro"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/card_titulo_plazo"
+                        android:textColor="@color/cr_gris_claro"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/txtPctRatio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12"
+                        android:textColor="@color/cr_azul_oscuro"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/card_titulo_rendimiento"
+                    android:textColor="@color/cr_gris_claro"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/txtImpTasacion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1.67% / 20.00%"
+                    android:textColor="@color/cr_azul_oscuro"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/pgbPctInvertido"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:progress="30"
+            android:max="100"
+            android:progressDrawable="@drawable/custom_progressbar"/>
+
+        <Button
+            android:id="@+id/btnRegresar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="5dp"
+            android:background="@color/cr_azul_oscuro"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:text="Regresar"/>
+
+    </LinearLayout>
+
+</FrameLayout>

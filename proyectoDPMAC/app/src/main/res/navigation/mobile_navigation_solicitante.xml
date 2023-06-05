@@ -18,6 +18,18 @@
         tools:layout="@layout/fragment_solicitud_actualizar" />
 
     <fragment
+        android:id="@+id/nav_solicitud_ver"
+        android:name="com.jtrujillo.dpmac.ui.solicitudes.SolicitudVerFragment"
+        android:label="@string/menu_solicitud_ver"
+        tools:layout="@layout/fragment_solicitud_ver" />
+
+    <fragment
+        android:id="@+id/nav_solicitud_ver2"
+        android:name="com.jtrujillo.dpmac.ui.solicitudes.SolicitudVer2Fragment"
+        android:label="@string/menu_solicitud_ver"
+        tools:layout="@layout/fragment_solicitud_ver2" />
+
+    <fragment
         android:id="@+id/nav_solicitudes_pendientes"
         android:name="com.jtrujillo.dpmac.ui.solicitudes.SolicitudesPendientesFragment"
         android:label="@string/menu_solicitudes_pendientes"
