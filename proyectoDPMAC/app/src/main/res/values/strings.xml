@@ -22,7 +22,7 @@
     <string name="menu_oportunidad_invertir">Invertir</string>
     <string name="menu_inversiones">Mis Inversiones</string>
     <string name="menu_inversiones_en_cobranza">Mis Inv. en Cobranza</string>
-    <string name="menu_inversiones_terminadas">Mis Inv. en Terminadas</string>
+    <string name="menu_inversiones_terminadas">Mis Inv. Terminadas</string>
     <string name="menu_inversion_ver">Ver Inversión</string>
     <string name="menu_usuario_actualizar">Modificar Perfil</string>
     <string name="menu_logout">Cerrar Sesión</string>
