@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvwOportunidad"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="2.5dp"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="6dp">
+
+            <ImageView
+                android:id="@+id/imgNomFoto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="false"
+                android:layout_gravity="center"
+                android:src="@drawable/img_casa01" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgNomFoto"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="4dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtNomOportunidadTipo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cr_oportunidadtipo_casa"
+                        android:textColor="@color/cr_azul_oscuro"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/card_titulo_riesgo"
+                            android:textColor="@color/cr_gris_claro"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/txtNomOportunidadPerfilRiesgo"
+                            android:layout_width="120dp"
+                            android:layout_height="25dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@color/cr_perfilriesgo_moderado"
+                            android:gravity="center"
+                            android:paddingHorizontal="20dp"
+                            android:shadowRadius="50"
+                            android:text="@string/cr_perfilriesgo_moderado"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/card_titulo_fecvigenciafin"
+                        android:textColor="@color/cr_gris_claro"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/txtFecVigenciaFin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="25/08/2023"
+                        android:textColor="@color/cr_azul_oscuro"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="end"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtImpPrestamo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="S/. 50,000.00"
+                        android:textColor="@color/cr_azul_oscuro"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/card_titulo_ratio"
+                            android:textColor="@color/cr_gris_claro"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/txtPctRatio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="30.00%"
+                            android:textColor="@color/cr_azul_oscuro"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/card_titulo_rendimiento"
+                        android:textColor="@color/cr_gris_claro"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/txtImpTir"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1.67% / 20.00%"
+                        android:textColor="@color/cr_azul_oscuro"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/pgbPctInvertido"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:max="100"
+            android:progress="30"
+            android:progressDrawable="@drawable/custom_progressbar" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

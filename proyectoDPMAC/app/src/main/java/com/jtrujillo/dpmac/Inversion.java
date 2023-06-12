@@ -1,6 +1,6 @@
 package com.jtrujillo.dpmac;
 
-public class Solicitud {
+public class Inversion {
     public Integer idOportunidad;
     public Integer idOportunidadEstado;
     public Integer resIdFoto;
@@ -8,12 +8,13 @@ public class Solicitud {
     public String nomOportunidadPerfilRiesgo;
     public String codOportunidadPerfilRiesgoFondoColor;
     public String codOportunidadPerfilRiesgoTextoColor;
-    public String fecVigenciaFin;
+    public String impGanancia;
     public String impPrestamo;
-    public String pctRatio;
-    public String impTasacion;
+    public Integer numMesPlazo;
+    public String impTir;
+    public Integer numProgresoInversion;
 
-    public Solicitud(Integer idOportunidad, Integer idOportunidadEstado, Integer resIdFoto, String nomOportunidadTipo, String nomOportunidadPerfilRiesgo, String codOportunidadPerfilRiesgoFondoColor, String codOportunidadPerfilRiesgoTextoColor, String fecVigenciaFin, String impPrestamo, String pctRatio, String impTasacion) {
+    public Inversion(Integer idOportunidad, Integer idOportunidadEstado, Integer resIdFoto, String nomOportunidadTipo, String nomOportunidadPerfilRiesgo, String codOportunidadPerfilRiesgoFondoColor, String codOportunidadPerfilRiesgoTextoColor, String impGanancia, String impPrestamo, Integer numMesPlazo, String impTir, Integer numProgresoInversion) {
         this.idOportunidad = idOportunidad;
         this.idOportunidadEstado = idOportunidadEstado;
         this.resIdFoto = resIdFoto;
@@ -21,10 +22,11 @@ public class Solicitud {
         this.nomOportunidadPerfilRiesgo = nomOportunidadPerfilRiesgo;
         this.codOportunidadPerfilRiesgoFondoColor = codOportunidadPerfilRiesgoFondoColor;
         this.codOportunidadPerfilRiesgoTextoColor = codOportunidadPerfilRiesgoTextoColor;
-        this.fecVigenciaFin = fecVigenciaFin;
+        this.impGanancia = impGanancia;
         this.impPrestamo = impPrestamo;
-        this.pctRatio = pctRatio;
-        this.impTasacion = impTasacion;
+        this.numMesPlazo = numMesPlazo;
+        this.impTir = impTir;
+        this.numProgresoInversion = numProgresoInversion;
     }
 
     public Integer getIdOportunidad() {
@@ -55,19 +57,23 @@ public class Solicitud {
         return codOportunidadPerfilRiesgoTextoColor;
     }
 
-    public String getFecVigenciaFin() {
-        return fecVigenciaFin;
+    public String getImpGanancia() {
+        return impGanancia;
     }
 
     public String getImpPrestamo() {
         return impPrestamo;
     }
 
-    public String getPctRatio() {
-        return pctRatio;
+    public Integer getNumMesPlazo() {
+        return numMesPlazo;
     }
 
-    public String getImpTasacion() {
-        return impTasacion;
+    public String getImpTir() {
+        return impTir;
+    }
+
+    public Integer getNumProgresoInversion() {
+        return numProgresoInversion;
     }
 }

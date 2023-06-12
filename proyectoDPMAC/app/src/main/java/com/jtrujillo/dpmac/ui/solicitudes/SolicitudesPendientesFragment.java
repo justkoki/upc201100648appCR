@@ -92,7 +92,7 @@ public class SolicitudesPendientesFragment extends Fragment {
         binding.rvwSolicitudes.setAdapter(adapter);
 */
         SolicitudAdapter solicitudAdapter = new SolicitudAdapter(solicitudList, getContext());
-        RecyclerView rvwSolicitudes = view.findViewById(R.id.rvwSolicitudes);
+        RecyclerView rvwSolicitudes = view.findViewById(R.id.rvwOportunidades);
         rvwSolicitudes.setHasFixedSize(true);
         rvwSolicitudes.setLayoutManager(new LinearLayoutManager(getContext()));
         rvwSolicitudes.setAdapter(solicitudAdapter);
@@ -118,24 +118,24 @@ public class SolicitudesPendientesFragment extends Fragment {
         List<Solicitud> solicitudes = new ArrayList<>();
 
         solicitudes.add(new Solicitud(
-                1, 1, R.drawable.img_casa01, "Casa01",
-                "PENDIENTE", "#969FAA", "25/08/2023",
-                "S/. 50,000.00", "0.00%", "Por definir"
+                1, 1, R.drawable.img_casa01, "Casa",
+                "PENDIENTE", "#969FAA", "#000000",
+                "25/08/2023", "S/. 50,000.00", "0.00%", "Por definir"
         ));
         solicitudes.add(new Solicitud(
-                2, 1, R.drawable.img_departamento01, "Departamento01",
-                "PENDIENTE", "#969FAA", "26/08/2023",
-                "S/. 40,000.00", "0.00%", "Por definir"
+                2, 1, R.drawable.img_departamento01, "Departamento",
+                "PENDIENTE", "#969FAA", "#000000",
+                "26/08/2023", "S/. 40,000.00", "0.00%", "Por definir"
         ));
         solicitudes.add(new Solicitud(
-                3, 1, R.drawable.img_casa02, "Casa02",
-                "PENDIENTE", "#969FAA", "27/08/2023",
-                "S/. 70,000.00", "0.00%", "Por definir"
+                3, 1, R.drawable.img_casa02, "Casa",
+                "PENDIENTE", "#969FAA", "#000000",
+                "27/08/2023", "S/. 70,000.00", "0.00%", "Por definir"
         ));
         solicitudes.add(new Solicitud(
-                4, 1, R.drawable.img_departamento02, "Departamento02",
-                "PENDIENTE", "#969FAA", "28/08/2023",
-                "S/. 30,000.00", "0.00%", "Por definir"
+                4, 1, R.drawable.img_departamento02, "Departamento",
+                "PENDIENTE", "#969FAA", "#000000",
+                "28/08/2023", "S/. 30,000.00", "0.00%", "Por definir"
         ));
 
         return solicitudes;

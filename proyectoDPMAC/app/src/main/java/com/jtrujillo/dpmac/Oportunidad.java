@@ -1,6 +1,6 @@
 package com.jtrujillo.dpmac;
 
-public class Solicitud {
+public class Oportunidad {
     public Integer idOportunidad;
     public Integer idOportunidadEstado;
     public Integer resIdFoto;
@@ -11,9 +11,10 @@ public class Solicitud {
     public String fecVigenciaFin;
     public String impPrestamo;
     public String pctRatio;
-    public String impTasacion;
+    public String impTir;
+    public Integer numProgresoInversion;
 
-    public Solicitud(Integer idOportunidad, Integer idOportunidadEstado, Integer resIdFoto, String nomOportunidadTipo, String nomOportunidadPerfilRiesgo, String codOportunidadPerfilRiesgoFondoColor, String codOportunidadPerfilRiesgoTextoColor, String fecVigenciaFin, String impPrestamo, String pctRatio, String impTasacion) {
+    public Oportunidad(Integer idOportunidad, Integer idOportunidadEstado, Integer resIdFoto, String nomOportunidadTipo, String nomOportunidadPerfilRiesgo, String codOportunidadPerfilRiesgoFondoColor, String codOportunidadPerfilRiesgoTextoColor, String fecVigenciaFin, String impPrestamo, String pctRatio, String impTir, Integer numProgresoInversion) {
         this.idOportunidad = idOportunidad;
         this.idOportunidadEstado = idOportunidadEstado;
         this.resIdFoto = resIdFoto;
@@ -24,7 +25,8 @@ public class Solicitud {
         this.fecVigenciaFin = fecVigenciaFin;
         this.impPrestamo = impPrestamo;
         this.pctRatio = pctRatio;
-        this.impTasacion = impTasacion;
+        this.impTir = impTir;
+        this.numProgresoInversion = numProgresoInversion;
     }
 
     public Integer getIdOportunidad() {
@@ -67,7 +69,11 @@ public class Solicitud {
         return pctRatio;
     }
 
-    public String getImpTasacion() {
-        return impTasacion;
+    public String getImpTir() {
+        return impTir;
+    }
+
+    public Integer getNumProgresoInversion() {
+        return numProgresoInversion;
     }
 }

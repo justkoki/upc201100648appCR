@@ -11,9 +11,10 @@
         android:layout_height="match_parent">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvwSolicitudes"
+            android:id="@+id/rvwOportunidades"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginBottom="60dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -33,7 +34,7 @@
             android:textColor="@color/white"
             android:textSize="18dp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/rvwSolicitudes"
+            app:layout_constraintTop_toBottomOf="@+id/rvwOportunidades"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 

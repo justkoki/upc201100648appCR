@@ -6,6 +6,40 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.oportunidades.OportunidadesFragment">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvwOportunidades"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <Button
+            android:id="@+id/btnVerMapaOportunidades"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="5dp"
+            android:background="@color/cr_azul_oscuro"
+            android:text="Ver en Mapa"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/rvwOportunidades"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+<!--
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -651,18 +685,6 @@
         </LinearLayout>
 
     </ScrollView>
-
-    <Button
-        android:id="@+id/btnVerMapaOportunidades"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_gravity="bottom"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginVertical="5dp"
-        android:background="@color/cr_azul_oscuro"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:textSize="18dp"
-        android:text="Ver en Mapa"/>
+-->
 
 </FrameLayout>

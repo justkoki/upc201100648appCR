@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.navigation.Navigation;
@@ -13,32 +14,32 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class SolicitudAdapter extends RecyclerView.Adapter<SolicitudAdapter.ViewHolder> {
+public class InversionAdapter extends RecyclerView.Adapter<InversionAdapter.ViewHolder> {
 
-    private final List<Solicitud> solicitudList;
+    private final List<Inversion> inversionList;
     private LayoutInflater myInflater;
     private Context myContext;
 
-    public SolicitudAdapter(List<Solicitud> itemList, Context context) {
+    public InversionAdapter(List<Inversion> itemList, Context context) {
         this.myInflater = LayoutInflater.from(context);
-        this.solicitudList = itemList;
+        this.inversionList = itemList;
         this.myContext = context;
     }
 
     @Override
     public int getItemCount() {
-        return solicitudList.size();
+        return inversionList.size();
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = myInflater.inflate(R.layout.item_solicitud, parent, false);
-        return new ViewHolder(view);
+        View view = myInflater.inflate(R.layout.item_inversion, parent, false);
+        return new InversionAdapter.ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
-        Solicitud item = solicitudList.get(position);
+        Inversion item = inversionList.get(position);
 
         Integer idOportunidadEstado = item.getIdOportunidadEstado();
 
@@ -47,26 +48,34 @@ public class SolicitudAdapter extends RecyclerView.Adapter<SolicitudAdapter.View
         holder.txtNomOportunidadPerfilRiesgo.setText(item.getNomOportunidadPerfilRiesgo());
         holder.txtNomOportunidadPerfilRiesgo.setBackgroundColor(Color.parseColor(item.getCodOportunidadPerfilRiesgoFondoColor()));
         holder.txtNomOportunidadPerfilRiesgo.setTextColor(Color.parseColor(item.getCodOportunidadPerfilRiesgoTextoColor()));
-        holder.txtFecVigenciaFin.setText(item.getFecVigenciaFin());
+        holder.txtImpGanancia.setText(item.getImpGanancia());
         holder.txtImpPrestamo.setText(item.getImpPrestamo());
-        holder.txtPctRatio.setText(item.getPctRatio());
-        holder.txtImpTasacion.setText(item.getImpTasacion());
+        holder.txtNumMesPlazo.setText(item.getNumMesPlazo().toString());
+        holder.txtImpTir.setText(item.getImpTir());
+        holder.pgbPctInvertido.setProgress(item.getNumProgresoInversion());
+
+        if (idOportunidadEstado == 6
+            || idOportunidadEstado == 7
+        ) {
+            holder.pgbPctInvertido.setVisibility(View.GONE);
+        }
 
         holder.itemView.setOnClickListener(v -> {
-            if (idOportunidadEstado == 1) {
-                Navigation.findNavController(holder.itemView).navigate(R.id.nav_solicitud_actualizar);
-            } else if (idOportunidadEstado == 2) {
-                Navigation.findNavController(holder.itemView).navigate(R.id.nav_solicitud_ver);
+            if (idOportunidadEstado == 6) {
+                Navigation.findNavController(holder.itemView).navigate(R.id.nav_inversion_ver2);
+            } else if (idOportunidadEstado == 7) {
+                Navigation.findNavController(holder.itemView).navigate(R.id.nav_inversion_ver3);
             } else {
-                Navigation.findNavController(holder.itemView).navigate(R.id.nav_solicitud_ver2);
+                Navigation.findNavController(holder.itemView).navigate(R.id.nav_inversion_ver);
             }
         });
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         private final ImageView imgNomFoto;
-        private final TextView txtNomOportunidadTipo, txtNomOportunidadPerfilRiesgo, txtFecVigenciaFin;
-        private final TextView txtImpPrestamo, txtPctRatio, txtImpTasacion;
+        private final TextView txtNomOportunidadTipo, txtNomOportunidadPerfilRiesgo, txtImpGanancia;
+        private final TextView txtImpPrestamo, txtNumMesPlazo, txtImpTir;
+        private final ProgressBar pgbPctInvertido;
 
         ViewHolder(View itemView) {
             super(itemView);
@@ -74,11 +83,11 @@ public class SolicitudAdapter extends RecyclerView.Adapter<SolicitudAdapter.View
             imgNomFoto                      = itemView.findViewById(R.id.imgNomFoto);
             txtNomOportunidadTipo           = itemView.findViewById(R.id.txtNomOportunidadTipo);
             txtNomOportunidadPerfilRiesgo   = itemView.findViewById(R.id.txtNomOportunidadPerfilRiesgo);
-            txtFecVigenciaFin               = itemView.findViewById(R.id.txtFecVigenciaFin);
+            txtImpGanancia                  = itemView.findViewById(R.id.txtImpGanancia);
             txtImpPrestamo                  = itemView.findViewById(R.id.txtImpPrestamo);
-            txtPctRatio                     = itemView.findViewById(R.id.txtPctRatio);
-            txtImpTasacion                  = itemView.findViewById(R.id.txtImpTasacion);
+            txtNumMesPlazo                  = itemView.findViewById(R.id.txtNumMesPlazo);
+            txtImpTir                       = itemView.findViewById(R.id.txtImpTir);
+            pgbPctInvertido                 = itemView.findViewById(R.id.pgbPctInvertido);
         }
     }
-
 }
