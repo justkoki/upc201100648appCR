@@ -1,6 +1,5 @@
 package com.jtrujillo.dpmac.ui.inversiones;
 
-import androidx.cardview.widget.CardView;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.os.Bundle;
@@ -8,8 +7,6 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -17,7 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.jtrujillo.dpmac.Inversion;
+import com.jtrujillo.dpmac.entidades.Inversion;
 import com.jtrujillo.dpmac.InversionAdapter;
 import com.jtrujillo.dpmac.R;
 
@@ -27,7 +24,7 @@ import java.util.List;
 public class InversionesEncobranzaFragment extends Fragment {
 
     //CardView cvwOportunidad;
-    List<Inversion> inversionList;
+    //List<Inversion> inversionList;
 
     private InversionesEncobranzaViewModel mViewModel;
 
@@ -61,30 +58,33 @@ public class InversionesEncobranzaFragment extends Fragment {
 
         List<Inversion> inversionList = obtenerInversiones();
 
-        InversionAdapter inversionAdapter = new InversionAdapter(inversionList, getContext());
+        InversionAdapter adapter = new InversionAdapter(inversionList, getContext());
         RecyclerView rvwOportunidades = view.findViewById(R.id.rvwOportunidades);
         rvwOportunidades.setHasFixedSize(true);
         rvwOportunidades.setLayoutManager(new LinearLayoutManager(getContext()));
-        rvwOportunidades.setAdapter(inversionAdapter);
+        rvwOportunidades.setAdapter(adapter);
     }
 
     private List<Inversion> obtenerInversiones() {
         List<Inversion> inversiones = new ArrayList<>();
 
         inversiones.add(new Inversion(
-                101, 6, R.drawable.img_casa03, "Casa",
-                "BAJO", "#13CE66", "#FFFFFF",
-                "S/. 2,000.00", "S/. 50,000.00", 12, "1.67% / 20.00%", 100
+                105, "Casa", 6, "BAJO",
+                "#13CE66", "#FFFFFF",
+                "S/. 50,000.00", "S/. 2,000.00", "1.67% / 20.00%",
+                12, R.drawable.img_casa03, 100
         ));
         inversiones.add(new Inversion(
-                102, 6, R.drawable.img_departamento03, "Departamento",
-                "MODERADO", "#FFDC5C", "#FFFFFF",
-                "S/. 4,800.00", "S/. 40,000.00", 24, "2.00% / 24.00%", 100
+                106, "Departamento", 6, "MODERADO",
+                "#FFDC5C", "#FFFFFF",
+                "S/. 40,000.00", "S/. 4,800.00", "2.00% / 24.00%",
+                24, R.drawable.img_departamento03, 100
         ));
         inversiones.add(new Inversion(
-                103, 6, R.drawable.img_casa02, "Casa",
-                "MEDIO", "#FF9052", "#FFFFFF",
-                "S/. 2,100.00", "S/. 70,000.00", 12, "1.75% / 21.00%", 100
+                107, "Casa", 6, "MEDIO",
+                "#FF9052", "#FFFFFF",
+                "S/. 70,000.00", "S/. 2,100.00", "1.75% / 21.00%",
+                12, R.drawable.img_casa02, 100
         ));
 
         return inversiones;

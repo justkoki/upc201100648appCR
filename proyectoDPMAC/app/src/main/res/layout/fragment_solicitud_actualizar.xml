@@ -205,7 +205,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/txtLayoutNumMesPlazo">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/txtNumTir"
+                        android:id="@+id/txtPctTir"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:height="48dp"

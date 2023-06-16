@@ -14,13 +14,21 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 import com.jtrujillo.dpmac.R;
+import com.jtrujillo.dpmac.entidades.MesPlazo;
+import com.jtrujillo.dpmac.entidades.OportunidadTipo;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class SolicitudRegistrarFragment extends Fragment {
 
+    Spinner spnOportunidadTipo, spnMesPlazo;
     Button btnSolicitudRegistrar;
 
     EditText txtFecVigenciaInicio;
@@ -36,6 +44,11 @@ public class SolicitudRegistrarFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_solicitud_registrar, container, false);
+
+        spnOportunidadTipo = view.findViewById(R.id.spnOportunidadTipo);
+        spnMesPlazo = view.findViewById(R.id.spnMesPlazo);
+        cargarOportunidadTipos();
+        cargarNumMesPlazos();
 
         btnSolicitudRegistrar = (Button)view.findViewById(R.id.btnSolicitudRegistrar);
         btnSolicitudRegistrar.setOnClickListener(v -> {
@@ -65,6 +78,34 @@ public class SolicitudRegistrarFragment extends Fragment {
         dpdFecVigenciaInicio.show();
         */
         return view;
+    }
+
+    public void cargarOportunidadTipos() {
+        List<OportunidadTipo> listaOportunidadTipos = new ArrayList<>();
+
+        listaOportunidadTipos.add(new OportunidadTipo(1, "Casa"));
+        listaOportunidadTipos.add(new OportunidadTipo(2, "Departamento"));
+        listaOportunidadTipos.add(new OportunidadTipo(3, "Lote"));
+
+        ArrayAdapter<OportunidadTipo> adapter = new ArrayAdapter<>(
+                getContext(), android.R.layout.simple_spinner_item, listaOportunidadTipos
+        );
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spnOportunidadTipo.setAdapter(adapter);
+    }
+
+    public void cargarNumMesPlazos() {
+        ArrayList<MesPlazo> listaMesPlazos = new ArrayList<>();
+
+        listaMesPlazos.add(new MesPlazo(12, "12 meses"));
+        listaMesPlazos.add(new MesPlazo(24, "24 meses"));
+        listaMesPlazos.add(new MesPlazo(36, "36 meses"));
+
+        ArrayAdapter<MesPlazo> adapter = new ArrayAdapter<>(
+                getContext(), android.R.layout.simple_spinner_item, listaMesPlazos
+        );
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spnMesPlazo.setAdapter(adapter);
     }
 
     @Override

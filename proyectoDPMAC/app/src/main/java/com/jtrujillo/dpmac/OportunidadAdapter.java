@@ -12,6 +12,8 @@ import android.widget.TextView;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.jtrujillo.dpmac.entidades.Oportunidad;
+
 import java.util.List;
 
 public class OportunidadAdapter extends RecyclerView.Adapter<OportunidadAdapter.ViewHolder> {
@@ -41,7 +43,7 @@ public class OportunidadAdapter extends RecyclerView.Adapter<OportunidadAdapter.
     public void onBindViewHolder(final ViewHolder holder, final int position) {
         Oportunidad item = oportunidadList.get(position);
 
-        Integer idOportunidadEstado = item.getIdOportunidadEstado();
+        int idOportunidadEstado = item.getIdOportunidadEstado();
 
         holder.imgNomFoto.setImageResource(item.getResIdFoto());
         holder.txtNomOportunidadTipo.setText(item.getNomOportunidadTipo());
@@ -51,7 +53,7 @@ public class OportunidadAdapter extends RecyclerView.Adapter<OportunidadAdapter.
         holder.txtFecVigenciaFin.setText(item.getFecVigenciaFin());
         holder.txtImpPrestamo.setText(item.getImpPrestamo());
         holder.txtPctRatio.setText(item.getPctRatio());
-        holder.txtImpTir.setText(item.getImpTir());
+        holder.txtPctTir.setText(item.getPctTir());
         holder.pgbPctInvertido.setProgress(item.getNumProgresoInversion());
 
         holder.itemView.setOnClickListener(v -> {
@@ -62,7 +64,7 @@ public class OportunidadAdapter extends RecyclerView.Adapter<OportunidadAdapter.
     public class ViewHolder extends RecyclerView.ViewHolder {
         private final ImageView imgNomFoto;
         private final TextView txtNomOportunidadTipo, txtNomOportunidadPerfilRiesgo, txtFecVigenciaFin;
-        private final TextView txtImpPrestamo, txtPctRatio, txtImpTir;
+        private final TextView txtImpPrestamo, txtPctRatio, txtPctTir;
         private final ProgressBar pgbPctInvertido;
 
         ViewHolder(View itemView) {
@@ -74,7 +76,7 @@ public class OportunidadAdapter extends RecyclerView.Adapter<OportunidadAdapter.
             txtFecVigenciaFin               = itemView.findViewById(R.id.txtFecVigenciaFin);
             txtImpPrestamo                  = itemView.findViewById(R.id.txtImpPrestamo);
             txtPctRatio                     = itemView.findViewById(R.id.txtPctRatio);
-            txtImpTir                       = itemView.findViewById(R.id.txtImpTir);
+            txtPctTir                       = itemView.findViewById(R.id.txtPctTir);
             pgbPctInvertido                 = itemView.findViewById(R.id.pgbPctInvertido);
         }
     }

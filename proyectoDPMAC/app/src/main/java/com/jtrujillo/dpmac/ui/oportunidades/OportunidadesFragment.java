@@ -1,6 +1,5 @@
 package com.jtrujillo.dpmac.ui.oportunidades;
 
-import androidx.cardview.widget.CardView;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.os.Bundle;
@@ -19,7 +18,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.jtrujillo.dpmac.R;
-import com.jtrujillo.dpmac.Oportunidad;
+import com.jtrujillo.dpmac.entidades.Oportunidad;
 import com.jtrujillo.dpmac.OportunidadAdapter;
 
 import java.util.ArrayList;
@@ -29,7 +28,7 @@ public class OportunidadesFragment extends Fragment {
 
     Button btnVerMapaOportunidades;
     //CardView cvwOportunidad;
-    List<Oportunidad> oportunidadList;
+    //List<Oportunidad> oportunidadList;
 
     private OportunidadesViewModel mViewModel;
 
@@ -69,11 +68,11 @@ public class OportunidadesFragment extends Fragment {
 
         List<Oportunidad> oportunidadList = obtenerOportunidades();
 
-        OportunidadAdapter oportunidadAdapter = new OportunidadAdapter(oportunidadList, getContext());
+        OportunidadAdapter adapter = new OportunidadAdapter(oportunidadList, getContext());
         RecyclerView rvwOportunidades = view.findViewById(R.id.rvwOportunidades);
         rvwOportunidades.setHasFixedSize(true);
         rvwOportunidades.setLayoutManager(new LinearLayoutManager(getContext()));
-        rvwOportunidades.setAdapter(oportunidadAdapter);
+        rvwOportunidades.setAdapter(adapter);
 
         btnVerMapaOportunidades = (Button)view.findViewById(R.id.btnVerMapaOportunidades);
         btnVerMapaOportunidades.setOnClickListener(v -> {
@@ -86,24 +85,28 @@ public class OportunidadesFragment extends Fragment {
         List<Oportunidad> oportunidades = new ArrayList<>();
 
         oportunidades.add(new Oportunidad(
-                1, 1, R.drawable.img_casa01, "Casa01",
-                "BAJO", "#13CE66", "#FFFFFF",
-                "25/08/2023", "S/. 50,000.00", "20.00%", "1.67% / 20.00%", 30
+                1, "Casa", 5, "BAJO",
+                "#13CE66", "#FFFFFF",
+                "25/08/2023", "S/. 50,000.00", "20.00%", "1.67% / 20.00%",
+                R.drawable.img_casa01, 30
         ));
         oportunidades.add(new Oportunidad(
-                2, 1, R.drawable.img_departamento01, "Departamento01",
-                "MODERADO", "#FFDC5C", "#FFFFFF",
-                "26/08/2023", "S/. 40,000.00", "25.00%", "2.00% / 24.00%", 15
+                2, "Departamento", 5, "MODERADO",
+                "#FFDC5C", "#FFFFFF",
+                "26/08/2023", "S/. 40,000.00", "25.00%", "2.00% / 24.00%",
+                R.drawable.img_departamento01, 15
         ));
         oportunidades.add(new Oportunidad(
-                3, 1, R.drawable.img_casa02, "Casa02",
-                "MEDIO", "#FF9052", "#FFFFFF",
-                "27/08/2023", "S/. 70,000.00", "20.00%", "1.75% / 21.00%", 40
+                3, "Casa", 5, "MEDIO",
+                "#FF9052", "#FFFFFF",
+                "27/08/2023", "S/. 70,000.00", "20.00%", "1.75% / 21.00%",
+                R.drawable.img_casa02, 40
         ));
         oportunidades.add(new Oportunidad(
-                4, 1, R.drawable.img_departamento02, "Departamento02",
-                "BAJO", "#13CE66", "#FFFFFF",
-                "28/08/2023", "S/. 30,000.00", "30.00%", "1.83% / 22.00%", 25
+                4, "Departamento", 5, "BAJO",
+                "#13CE66", "#FFFFFF",
+                "28/08/2023", "S/. 30,000.00", "30.00%", "1.83% / 22.00%",
+                R.drawable.img_departamento02, 25
         ));
 
         return oportunidades;

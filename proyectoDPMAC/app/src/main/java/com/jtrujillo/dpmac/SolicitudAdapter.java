@@ -2,6 +2,7 @@ package com.jtrujillo.dpmac;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,36 +12,45 @@ import android.widget.TextView;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.jtrujillo.dpmac.entidades.Oportunidad;
+
 import java.util.List;
 
-public class SolicitudAdapter extends RecyclerView.Adapter<SolicitudAdapter.ViewHolder> {
+public class SolicitudAdapter
+        extends RecyclerView.Adapter<SolicitudAdapter.ViewHolder>
+        /*implements View.OnClickListener*/ {
 
-    private final List<Solicitud> solicitudList;
+    private final List<Oportunidad> oportunidadList;
     private LayoutInflater myInflater;
     private Context myContext;
 
-    public SolicitudAdapter(List<Solicitud> itemList, Context context) {
+    //private View.OnClickListener listener;
+
+    public SolicitudAdapter(List<Oportunidad> itemList, Context context) {
         this.myInflater = LayoutInflater.from(context);
-        this.solicitudList = itemList;
+        this.oportunidadList = itemList;
         this.myContext = context;
     }
 
     @Override
     public int getItemCount() {
-        return solicitudList.size();
+        return oportunidadList.size();
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = myInflater.inflate(R.layout.item_solicitud, parent, false);
+
+        //view.setOnClickListener(this);
+
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
-        Solicitud item = solicitudList.get(position);
+        Oportunidad item = oportunidadList.get(position);
 
-        Integer idOportunidadEstado = item.getIdOportunidadEstado();
+        int idOportunidadEstado = item.getIdOportunidadEstado();
 
         holder.imgNomFoto.setImageResource(item.getResIdFoto());
         holder.txtNomOportunidadTipo.setText(item.getNomOportunidadTipo());
@@ -53,16 +63,24 @@ public class SolicitudAdapter extends RecyclerView.Adapter<SolicitudAdapter.View
         holder.txtImpTasacion.setText(item.getImpTasacion());
 
         holder.itemView.setOnClickListener(v -> {
+            Bundle bundle = new Bundle();
+            //bundle.putParcelable("solicitud", solicitudList.get(holder.getBindingAdapterPosition()));
+
             if (idOportunidadEstado == 1) {
-                Navigation.findNavController(holder.itemView).navigate(R.id.nav_solicitud_actualizar);
+                Navigation.findNavController(holder.itemView).navigate(R.id.nav_solicitud_actualizar, bundle);
             } else if (idOportunidadEstado == 2) {
-                Navigation.findNavController(holder.itemView).navigate(R.id.nav_solicitud_ver);
+                Navigation.findNavController(holder.itemView).navigate(R.id.nav_solicitud_ver, bundle);
             } else {
-                Navigation.findNavController(holder.itemView).navigate(R.id.nav_solicitud_ver2);
+                Navigation.findNavController(holder.itemView).navigate(R.id.nav_solicitud_ver2, bundle);
             }
         });
     }
+/*
+    @Override
+    public void onClick(View v) {
 
+    }
+*/
     public class ViewHolder extends RecyclerView.ViewHolder {
         private final ImageView imgNomFoto;
         private final TextView txtNomOportunidadTipo, txtNomOportunidadPerfilRiesgo, txtFecVigenciaFin;

@@ -18,7 +18,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.jtrujillo.dpmac.SolicitudAdapter;
-import com.jtrujillo.dpmac.Solicitud;
+import com.jtrujillo.dpmac.entidades.Oportunidad;
 import com.jtrujillo.dpmac.R;
 import com.jtrujillo.dpmac.databinding.FragmentSolicitudesPendientesBinding;
 
@@ -28,7 +28,7 @@ import java.util.List;
 public class SolicitudesPendientesFragment extends Fragment {
 
     Button btnSolicitudRegistrar;
-    List<Solicitud> solicitudList;
+    //List<Oportunidad> oportunidadList;
     private FragmentSolicitudesPendientesBinding binding;
 
     private SolicitudesPendientesViewModel mViewModel;
@@ -85,17 +85,19 @@ public class SolicitudesPendientesFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        List<Solicitud> solicitudList = obtenerSolicitudes();
+        List<Oportunidad> oportunidadList = obtenerOportunidades();
 /*
-        RecyclerView.Adapter<SolicitudAdapter.ViewHolder> adapter = new SolicitudAdapter(solicitudList, getContext());
+        RecyclerView.Adapter<OportunidadAdapter.ViewHolder> adapter = new OportunidadAdapter(oportunidadList, getContext());
         binding.rvwSolicitudes.setLayoutManager(new LinearLayoutManager(requireContext()));
         binding.rvwSolicitudes.setAdapter(adapter);
 */
-        SolicitudAdapter solicitudAdapter = new SolicitudAdapter(solicitudList, getContext());
+        SolicitudAdapter adapter = new SolicitudAdapter(oportunidadList, getContext());
         RecyclerView rvwSolicitudes = view.findViewById(R.id.rvwOportunidades);
         rvwSolicitudes.setHasFixedSize(true);
         rvwSolicitudes.setLayoutManager(new LinearLayoutManager(getContext()));
-        rvwSolicitudes.setAdapter(solicitudAdapter);
+        rvwSolicitudes.setAdapter(adapter);
+
+        //adapter.setOnItemClickListener();
 
         btnSolicitudRegistrar = view.findViewById(R.id.btnSolicitudRegistrar);
         btnSolicitudRegistrar.setOnClickListener(v -> {
@@ -114,31 +116,35 @@ public class SolicitudesPendientesFragment extends Fragment {
         });*/
     }
 
-    private List<Solicitud> obtenerSolicitudes() {
-        List<Solicitud> solicitudes = new ArrayList<>();
+    private List<Oportunidad> obtenerOportunidades() {
+        List<Oportunidad> oportunidades = new ArrayList<>();
 
-        solicitudes.add(new Solicitud(
-                1, 1, R.drawable.img_casa01, "Casa",
-                "PENDIENTE", "#969FAA", "#000000",
-                "25/08/2023", "S/. 50,000.00", "0.00%", "Por definir"
+        oportunidades.add(new Oportunidad(
+                1, "Casa", 1,
+                "PENDIENTE", "#969FAA",
+                "#000000", "25/08/2023", "Por definir",
+                "S/. 50,000.00", "0.00%", R.drawable.img_casa01
         ));
-        solicitudes.add(new Solicitud(
-                2, 1, R.drawable.img_departamento01, "Departamento",
-                "PENDIENTE", "#969FAA", "#000000",
-                "26/08/2023", "S/. 40,000.00", "0.00%", "Por definir"
+        oportunidades.add(new Oportunidad(
+                2, "Departamento", 1,
+                "PENDIENTE", "#969FAA",
+                "#000000", "26/08/2023", "Por definir",
+                "S/. 40,000.00", "0.00%", R.drawable.img_departamento01
         ));
-        solicitudes.add(new Solicitud(
-                3, 1, R.drawable.img_casa02, "Casa",
-                "PENDIENTE", "#969FAA", "#000000",
-                "27/08/2023", "S/. 70,000.00", "0.00%", "Por definir"
+        oportunidades.add(new Oportunidad(
+                3, "Casa", 1,
+                "PENDIENTE", "#969FAA",
+                "#000000", "27/08/2023", "Por definir",
+                "S/. 70,000.00", "0.00%", R.drawable.img_casa02
         ));
-        solicitudes.add(new Solicitud(
-                4, 1, R.drawable.img_departamento02, "Departamento",
-                "PENDIENTE", "#969FAA", "#000000",
-                "28/08/2023", "S/. 30,000.00", "0.00%", "Por definir"
+        oportunidades.add(new Oportunidad(
+                4, "Departamento", 1,
+                "PENDIENTE", "#969FAA",
+                "#000000", "28/08/2023", "Por definir",
+                "S/. 30,000.00", "0.00%", R.drawable.img_departamento02
         ));
 
-        return solicitudes;
+        return oportunidades;
     }
 /*
     @Override

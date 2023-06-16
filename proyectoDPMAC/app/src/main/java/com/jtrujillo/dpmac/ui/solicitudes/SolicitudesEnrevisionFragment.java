@@ -15,7 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.jtrujillo.dpmac.R;
-import com.jtrujillo.dpmac.Solicitud;
+import com.jtrujillo.dpmac.entidades.Oportunidad;
 import com.jtrujillo.dpmac.SolicitudAdapter;
 
 import java.util.ArrayList;
@@ -24,7 +24,7 @@ import java.util.List;
 public class SolicitudesEnrevisionFragment extends Fragment {
 
     //CardView cvwSolicitud;
-    List<Solicitud> solicitudList;
+    //List<Oportunidad> oportunidadList;
 
     private SolicitudesEnrevisionViewModel mViewModel;
 
@@ -56,40 +56,48 @@ public class SolicitudesEnrevisionFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        List<Solicitud> solicitudList = obtenerSolicitudes();
+        List<Oportunidad> oportunidadList = obtenerOportunidades();
 
-        SolicitudAdapter solicitudAdapter = new SolicitudAdapter(solicitudList, getContext());
+        SolicitudAdapter adapter = new SolicitudAdapter(oportunidadList, getContext());
         RecyclerView rvwSolicitudes = view.findViewById(R.id.rvwOportunidades);
         rvwSolicitudes.setHasFixedSize(true);
         rvwSolicitudes.setLayoutManager(new LinearLayoutManager(getContext()));
-        rvwSolicitudes.setAdapter(solicitudAdapter);
+        rvwSolicitudes.setAdapter(adapter);
     }
 
-    private List<Solicitud> obtenerSolicitudes() {
-        List<Solicitud> solicitudes = new ArrayList<>();
+    private List<Oportunidad> obtenerOportunidades() {
+        List<Oportunidad> oportunidades = new ArrayList<>();
 
-        solicitudes.add(new Solicitud(
-                5, 2, R.drawable.img_casa03, "Casa",
-                "PENDIENTE", "#969FAA", "#000000",
-                "25/08/2023", "S/. 50,000.00", "25.00%", "S/. 200,000.00"
+        oportunidades.add(new Oportunidad(
+                5, "Casa", 2,
+                "PENDIENTE", "#969FAA",
+                "#000000", "25/08/2023",
+                "S/. 200,000.00", "S/. 50,000.00", "25.00%",
+                R.drawable.img_casa03
         ));
-        solicitudes.add(new Solicitud(
-                6, 2, R.drawable.img_departamento03, "Departamento",
-                "PENDIENTE", "#969FAA", "#000000",
-                "26/08/2023", "S/. 40,000.00", "0.00%", "Por definir"
+        oportunidades.add(new Oportunidad(
+                6, "Departamento", 2,
+                "PENDIENTE", "#969FAA",
+                "#000000", "26/08/2023",
+                "Por definir", "S/. 40,000.00", "0.00%",
+                R.drawable.img_departamento03
         ));
-        solicitudes.add(new Solicitud(
-                7, 2, R.drawable.img_casa02, "Casa",
-                "PENDIENTE", "#969FAA", "#000000",
-                "27/08/2023", "S/. 70,000.00", "28.00%", "S/. 250,000.00"
+        oportunidades.add(new Oportunidad(
+                7, "Casa", 2,
+                "PENDIENTE", "#969FAA",
+                "#000000", "27/08/2023",
+                "S/. 250,000.00", "S/. 70,000.00", "28.00%",
+                R.drawable.img_casa02
         ));
-        solicitudes.add(new Solicitud(
-                8, 2, R.drawable.img_departamento02, "Departamento",
-                "PENDIENTE", "#969FAA", "#000000",
-                "26/08/2023", "S/. 60,000.00", "0.00%", "Por definir"
+        oportunidades.add(new Oportunidad(
+                8, "Departamento", 2,
+                "PENDIENTE", "#969FAA",
+                "#000000", "26/08/2023",
+                "Por definir", "S/. 60,000.00", "0.00%",
+                R.drawable.img_departamento02
         ));
 
-        return solicitudes;
+        return oportunidades;
     }
 
 }

@@ -12,6 +12,8 @@ import android.widget.TextView;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.jtrujillo.dpmac.entidades.Inversion;
+
 import java.util.List;
 
 public class InversionAdapter extends RecyclerView.Adapter<InversionAdapter.ViewHolder> {
@@ -51,7 +53,7 @@ public class InversionAdapter extends RecyclerView.Adapter<InversionAdapter.View
         holder.txtImpGanancia.setText(item.getImpGanancia());
         holder.txtImpPrestamo.setText(item.getImpPrestamo());
         holder.txtNumMesPlazo.setText(item.getNumMesPlazo().toString());
-        holder.txtImpTir.setText(item.getImpTir());
+        holder.txtPctTir.setText(item.getPctTir());
         holder.pgbPctInvertido.setProgress(item.getNumProgresoInversion());
 
         if (idOportunidadEstado == 6
@@ -74,7 +76,7 @@ public class InversionAdapter extends RecyclerView.Adapter<InversionAdapter.View
     public class ViewHolder extends RecyclerView.ViewHolder {
         private final ImageView imgNomFoto;
         private final TextView txtNomOportunidadTipo, txtNomOportunidadPerfilRiesgo, txtImpGanancia;
-        private final TextView txtImpPrestamo, txtNumMesPlazo, txtImpTir;
+        private final TextView txtImpPrestamo, txtNumMesPlazo, txtPctTir;
         private final ProgressBar pgbPctInvertido;
 
         ViewHolder(View itemView) {
@@ -86,7 +88,7 @@ public class InversionAdapter extends RecyclerView.Adapter<InversionAdapter.View
             txtImpGanancia                  = itemView.findViewById(R.id.txtImpGanancia);
             txtImpPrestamo                  = itemView.findViewById(R.id.txtImpPrestamo);
             txtNumMesPlazo                  = itemView.findViewById(R.id.txtNumMesPlazo);
-            txtImpTir                       = itemView.findViewById(R.id.txtImpTir);
+            txtPctTir                       = itemView.findViewById(R.id.txtPctTir);
             pgbPctInvertido                 = itemView.findViewById(R.id.pgbPctInvertido);
         }
     }

@@ -31,7 +31,11 @@ public class SolicitudActualizarFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_solicitud_actualizar, container, false);
-
+/*
+        Solicitud solicitud = savedInstanceState.getParcelable("solicitud");
+        ImageView imgNomFoto = view.findViewById(R.id.imgNomFoto);
+        imgNomFoto.setImageResource(solicitud.getResIdFoto());
+*/
         btnSolicitudActualizar = (Button)view.findViewById(R.id.btnSolicitudActualizar);
         btnSolicitudActualizar.setOnClickListener(v -> {
             NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment_content_menu_solicitante);
