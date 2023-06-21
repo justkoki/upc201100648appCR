@@ -15,7 +15,7 @@
             android:id="@+id/imgNomFoto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/img_casa01" />
+            android:src="@drawable/img_departamento02" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -33,7 +33,7 @@
                     android:id="@+id/txtNomOportunidadTipo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/cr_oportunidadtipo_casa"
+                    android:text="@string/cr_oportunidadtipo_departamento"
                     android:textColor="@color/cr_azul_oscuro"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -60,7 +60,7 @@
                         android:paddingHorizontal="20dp"
                         android:shadowRadius="50"
                         android:text="@string/cr_perfilriesgo_moderado"
-                        android:textColor="@color/cr_azul_oscuro2"
+                        android:textColor="@color/white"
                         android:textSize="12sp"
                         android:textStyle="bold" />
 
@@ -77,7 +77,7 @@
                     android:id="@+id/txtFecVigenciaFin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="25/08/2023"
+                    android:text="26/08/2023"
                     android:textColor="@color/cr_azul_oscuro"
                     android:textSize="15sp"
                     android:textStyle="bold" />
@@ -95,7 +95,7 @@
                     android:id="@+id/txtImpPrestamo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="S/. 50,000.00"
+                    android:text="S/. 25,000.00"
                     android:textColor="@color/cr_azul_oscuro"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -116,7 +116,7 @@
                         android:id="@+id/txtPctRatio"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="30.00%"
+                        android:text="16.67%"
                         android:textColor="@color/cr_azul_oscuro"
                         android:textSize="15sp"
                         android:textStyle="bold" />

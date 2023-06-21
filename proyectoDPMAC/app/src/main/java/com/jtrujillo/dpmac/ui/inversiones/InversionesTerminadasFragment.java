@@ -78,7 +78,7 @@ public class InversionesTerminadasFragment extends Fragment {
                 52, "Casa", 7, "MEDIO",
                 "#FF9052", "#FFFFFF",
                 "S/. 70,000.00", "S/. 2,100.00", "1.75% / 21.00%",
-                12, R.drawable.img_casa03, 100
+                12, R.drawable.img_casa02, 100
         ));
 
         return inversiones;
