@@ -64,6 +64,7 @@
             android:layout_height="60dp"
             android:layout_weight="1"
             android:background="@color/cr_azul_oscuro"
+            android:drawableTop="@drawable/icon_btn_registration_24dp"
             android:textColor="@color/white"
             android:text="Regresar" />
 
@@ -72,7 +73,9 @@
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:layout_weight="1"
+            android:layout_marginLeft="2dp"
             android:background="@color/cr_azul_oscuro"
+            android:drawableTop="@drawable/icon_btn_login_24dp"
             android:textColor="@color/white"
             android:text="Iniciar Sesión" />
     </LinearLayout>

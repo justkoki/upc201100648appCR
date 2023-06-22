@@ -96,6 +96,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/cr_azul_oscuro"
+            android:drawableTop="@drawable/icon_btn_registration_24dp"
             android:textColor="@color/white"
             android:text="Registrarse" />
 
